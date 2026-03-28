@@ -37,7 +37,7 @@ icon = "fa-brands fa-github"
 
 [[params.social]]
 key = 2
-name = "linkedin"
+name = "linkedIn"
 url = "https://www.linkedin.com/in/shajinder-singh-padda-012a7739"
 aria = "LinkedIn Profile"
 icon = "fa-brands fa-linkedin"
