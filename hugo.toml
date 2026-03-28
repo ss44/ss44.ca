@@ -31,6 +31,7 @@ name = "github"
 url = "https://github.com/ss44"
 target = "_blank"
 aria = "GitHub Profile"
+icon = "fa-brands fa-github"
 
 
 
@@ -39,3 +40,4 @@ key = 2
 name = "linkedin"
 url = "https://www.linkedin.com/in/shajinder-singh-padda-012a7739"
 aria = "LinkedIn Profile"
+icon = "fa-brands fa-linkedin"
