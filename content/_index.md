@@ -4,8 +4,8 @@ title = "Home"
 
 I am Shajinder Singh Padda.
 
-Welcome to my personal website / portfolio / tech notes. 
+I'm a Senior Full Stack Web Developer with 20+ years of experience turning complex problems into highly scalable, secure web applications.
 
-I am a Sr Full Stack Web Developer with over 20+ years experience. Proficient in **Ruby**, **Javascript**, **PHP**, and **Typescript**. With a working understanding of Python and Bash scripting. 
+While my core expertise lies in **Ruby**, **JavaScript** (*TypeScript*, *React*, *VueJS*), **PHP**, and most flavors of SQL (**PostgreSQL**, **MySQL**), my real passion is building resilient systems that users love and developers enjoy maintaining.
 
-I am currently learning Go and Rust, am a long time Linux user, and a fan of all things OpenSource.
+When I'm not writing production code, I'm actively exploring new languages and frameworks (like **Go** and **Rust**), living inside of a terminal somewhere. 

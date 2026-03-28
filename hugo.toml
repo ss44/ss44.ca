@@ -18,10 +18,11 @@ theme = "hugo-theme-nightfall"
 user = "shajinder"
 hostname = "ss44.ca"
 rotating_titles = [
-  "eh, yo.",
   "oh, hi.",
   "hello there.",
-  "greetings."
+  "greetings.",
+  "eh, yo."
+  "ola",
 ]
 rotating_titles_duration = 5
 
