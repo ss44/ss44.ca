@@ -107,9 +107,24 @@
                 font-size: 2rem;
             }
         }
+        .texture::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('/paper-texture.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply; /* use 'screen' if the grain is light */
+            opacity: 0.8;
+            pointer-events: none;
+            z-index: 9999;
+        }
     </style>
 </head>
-<body>
+<body class="texture">
     <div class="flexWrapper">
         <div class="content">
             <main class="main">
@@ -120,6 +135,19 @@
                             <span>{{ . }}</span>
                             {{ end }}
                         </h1>
+                        <script>
+                            (function() {
+                                const titleContainer = document.querySelector('.rotating-title');
+                                if (titleContainer) {
+                                    const spans = Array.from(titleContainer.querySelectorAll('span'));
+                                    for (let i = spans.length - 1; i > 0; i--) {
+                                        const j = Math.floor(Math.random() * (i + 1));
+                                        [spans[i], spans[j]] = [spans[j], spans[i]];
+                                    }
+                                    spans.forEach(span => titleContainer.appendChild(span));
+                                }
+                            })();
+                        </script>
                         {{ .Content }}
                     </div>
                     <div class="custom-home-links">
