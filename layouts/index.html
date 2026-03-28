@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+<head>
+    <title>{{ .Site.Title }}</title>
+    {{ partial "head.html" . }}
+    <style>
+        .custom-home {
+            margin-top: 15vh;
+            text-align: left;
+            padding: 0 20px;
+            max-width: 100%;
+            margin-left: 5%;
+            margin-right: 5%;
+            /* text-transform: lowercase; */
+        }
+        .custom-home-content h1 {
+            font-size: 3.25rem;
+            margin-bottom: 2.5rem;
+            font-weight: normal;
+        }
+        .custom-home-content p {
+            font-size: 1.56rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+        .custom-home-links {
+            margin-top: 5rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .custom-home-links a {
+            font-size: 1.56rem;
+            text-decoration: none;
+            color: var(--text-color);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .custom-home-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .rotating-title {
+            position: relative;
+            height: 3.9rem;
+            margin-bottom: 2.5rem;
+            font-size: 3.25rem;
+            font-weight: normal;
+        }
+        {{ $titles := .Site.Params.rotating_titles | default (slice "eh, yo.") }}
+        {{ $duration := .Site.Params.rotating_titles_duration | default 3 }}
+        {{ $count := len $titles }}
+        {{ $totalDuration := mul $count $duration }}
+        .rotating-title span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            filter: blur(8px);
+            animation: cycle-titles {{ $totalDuration }}s infinite ease-in-out;
+        }
+        {{ range $index, $title := $titles }}
+        .rotating-title span:nth-child({{ add $index 1 }}) { animation-delay: {{ mul $index $duration }}s; }
+        {{ end }}
+
+        @keyframes cycle-titles {
+            0% { opacity: 0; filter: blur(8px); }
+            {{ printf "%.2f%%" (div 50.0 $count) }} { opacity: 1; filter: blur(0px); }
+            {{ printf "%.2f%%" (div 100.0 $count) }} { opacity: 1; filter: blur(0px); }
+            {{ printf "%.2f%%" (div 150.0 $count) }} { opacity: 0; filter: blur(8px); }
+            100% { opacity: 0; filter: blur(8px); }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flexWrapper">
+        <div class="content">
+            <main class="main">
+                <div class="custom-home">
+                    <div class="custom-home-content">
+                        <h1 class="rotating-title">
+                            {{ range $titles }}
+                            <span>{{ . }}</span>
+                            {{ end }}
+                        </h1>
+                        {{ .Content }}
+                    </div>
+                    <div class="custom-home-links">
+                        {{ range .Site.Menus.header }}
+                            <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                        {{ end }}
+                        {{ range sort .Site.Params.social "key" }}
+                            <a href="{{ .url | safeURL }}">{{ .name }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
