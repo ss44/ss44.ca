@@ -1,5 +1,41 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://ss44.ca/'
 locale = 'en-ca'
 title = 'Shajinder Singh Padda'
 theme = "hugo-theme-nightfall"
 
+[menu]
+#  [[menu.header]]
+#    name = "notes"
+#    weight = 0
+#    url = "notes"
+
+#  [[menu.header]]
+#    name = "resume"
+#    weight = 2
+#    url = "resume.pdf"
+
+[params]
+user = "shajinder"
+hostname = "ss44.ca"
+rotating_titles = [
+  "eh, yo.",
+  "oh, hi.",
+  "hello there.",
+  "greetings."
+]
+rotating_titles_duration = 5
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/ss44"
+target = "_blank"
+aria = "GitHub Profile"
+
+
+
+[[params.social]]
+key = 2
+name = "linkedin"
+url = "https://www.linkedin.com/in/shajinder-singh-padda-012a7739"
+aria = "LinkedIn Profile"
