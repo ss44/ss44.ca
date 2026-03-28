@@ -107,20 +107,22 @@
                 font-size: 2rem;
             }
         }
-        .texture::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-image: url('/paper-texture.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            mix-blend-mode: multiply; /* use 'screen' if the grain is light */
-            opacity: 0.8;
-            pointer-events: none;
-            z-index: 9999;
+        @supports (mix-blend-mode: multiply) {
+            .texture::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-image: url('/paper-texture.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                mix-blend-mode: multiply; /* use 'screen' if the grain is light */
+                opacity: 0.6;
+                pointer-events: none;
+                z-index: 9999;
+            }
         }
     </style>
 </head>
