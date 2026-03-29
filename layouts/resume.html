@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ "css/resume/normalize.css" | relURL }}" />
+    <link rel="stylesheet" type="text/css" href="{{ "css/resume/fontawesome/css/font-awesome.css" | relURL }}" />
+    <link rel="stylesheet" type="text/css" href="{{ "css/resume/resume.css" | relURL }}" />
+  </head>
+  <body lang="en">
+    <section id="main">
+      <header id="title">
+        <h1>{{ .Site.Data.resume.personal.name }}</h1>
+        <span class="subtitle">{{ .Site.Data.resume.personal.subtitle }}</span>
+      </header>
+      
+      {{ if .Site.Data.resume.summary }}
+      <section class="main-block summary" >
+        <h2>
+          <i class="fa fa-user"></i> Summary
+        </h2>
+        <section class="blocks">
+          <div class="date"></div>
+          <div class="decorator"></div>
+          <div class="details">
+            <div>{{ .Site.Data.resume.summary }}</div>
+          </div>
+        </section>
+      </section>
+      {{ end }}
+
+      <section class="main-block">
+        <h2>
+          <i class="fa fa-suitcase"></i> Experiences
+        </h2>
+        {{ range .Site.Data.resume.experience }}
+        <section class="blocks">
+          <div class="date">
+            <span>{{ .start }}</span><span>{{ .end }}</span>
+          </div>
+          <div class="decorator">
+          </div>
+          <div class="details">
+            <header>
+              <h3>{{ .title }}</h3>
+              {{ if .place }}<span class="place">{{ .place }}</span>{{ end }}
+            </header>
+            <div>
+              <ul>
+                {{ range .details }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </section>
+        {{ end }}
+      </section>
+
+      <section class="main-block concise">
+        <h2>
+          <i class="fa fa-graduation-cap"></i> Education
+        </h2>
+        {{ range .Site.Data.resume.education }}
+        <section class="blocks">
+          <div class="date">
+            <span>{{ .start }}</span><span>{{ .end }}</span>
+          </div>
+          <div class="decorator">
+          </div>
+          <div class="details">
+            <header>
+              <h3>{{ .title }}</h3>
+              {{ if .place }}<span class="place">{{ .place }}</span>{{ end }}
+            </header>
+            <div>{{ .details }}</div>
+          </div>
+        </section>
+        {{ end }}
+      </section>
+    </section>
+    <aside id="sidebar">
+      <div class="side-block" id="contact">
+        <h1>
+          Contact Info
+        </h1>
+        <ul>
+          {{ range .Site.Data.resume.personal.contact }}
+          <li><i class="fa {{ .icon }}"></i> {{ .text }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="side-block" id="skills">
+        <h1>
+          Skills
+        </h1>
+        <ul>
+          {{ range .Site.Data.resume.skills }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      <!-- <div class="side-block" id="disclaimer">
+        This r&eacute;sum&eacute; was generated with Hugo.
+      </div> -->
+    </aside>
+  </body>
+</html>
