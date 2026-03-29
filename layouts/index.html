@@ -67,7 +67,7 @@
             animation: cycle-titles {{ $totalDuration }}s infinite ease-in-out;
         }
         {{ range $index, $title := $titles }}
-        .rotating-title span:nth-child({{ add $index 1 }}) { animation-delay: {{ mul $index $duration }}s; }
+        .rotating-title span:nth-child({{ add $index 1 }}) { animation-delay: calc({{ mul $index $duration }}s - {{ div $duration 2.0 }}s); }
         {{ end }}
 
         @keyframes cycle-titles {
