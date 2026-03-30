@@ -22,3 +22,5 @@ node_modules/
 fonts/
 # Local Netlify folder
 .netlify
+typst
+fonts/

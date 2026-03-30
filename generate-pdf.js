@@ -50,9 +50,30 @@ if (pdfMTime < typstMTime || pdfMTime < yamlMTime) {
     fs.mkdirSync(path.join(__dirname, 'public'), { recursive: true });
   }
 
+  let typstCmd = 'typst';
   try {
-    // We use npx typst so Netlify doesn't need it pre-installed globally
-    execSync(`npx --yes typst compile --root . --font-path fonts "${typstPath}" "${pdfPath}"`, { stdio: 'inherit' });
+    // Check if typst is available globally
+    execSync('typst --version', { stdio: 'ignore' });
+  } catch (e) {
+    if (process.platform === 'linux') {
+      const typstBin = path.join(__dirname, 'typst');
+      if (!fs.existsSync(typstBin)) {
+        console.log('Downloading Typst Linux binary...');
+        execSync('curl -sL "https://github.com/typst/typst/releases/download/v0.12.0/typst-x86_64-unknown-linux-musl.tar.xz" -o typst.tar.xz');
+        execSync('tar -xf typst.tar.xz --strip-components=1 typst-x86_64-unknown-linux-musl/typst');
+        fs.unlinkSync('typst.tar.xz');
+      }
+      typstCmd = './typst';
+    } else {
+      console.error('Typst is not installed globally. Please install it to generate the PDF.');
+      process.exitCode = 1;
+      process.exit();
+    }
+  }
+
+  try {
+    // Compile using the appropriate command
+    execSync(`${typstCmd} compile --root . --font-path fonts "${typstPath}" "${pdfPath}"`, { stdio: 'inherit' });
     console.log('PDF generated at public/resume.pdf');
   } catch (error) {
     console.error('Error generating PDF with Typst:', error.message);
