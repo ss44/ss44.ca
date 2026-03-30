@@ -23,6 +23,8 @@ ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
     pre = "fa-solid fa-file-pdf"
 
 [params]
+description = "Senior Systems Architect and Full Stack Developer with 20+ years of experience."
+images = ["/meta-preview.png"]
 user = "shajinder"
 hostname = "ss44.ca"
 rotating_titles = [
