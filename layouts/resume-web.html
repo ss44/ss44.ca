@@ -130,7 +130,7 @@
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
         margin-left: 10px;
     }
@@ -304,6 +304,9 @@
             <ul class="contact-list">
                 {{ range .Site.Data.resume.personal.contact }}
                 <li><i class="fa {{ .icon }}"></i> {{ .text }}</li>
+                {{ end }}
+                {{ range sort .Site.Params.social "key" }}
+                <li><i class="{{ .icon }}"></i> <a href="{{ .url }}" style="color: inherit; text-decoration: none;" {{ if .target }}target="{{ .target }}"{{ end }}>{{ .url | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></li>
                 {{ end }}
             </ul>
         </div>

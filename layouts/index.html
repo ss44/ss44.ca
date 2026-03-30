@@ -153,7 +153,9 @@
                     </div>
                     <div class="custom-home-links">
                         {{ range .Site.Menus.header }}
-                            <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+                            <a href="{{ .URL | absLangURL }}">
+                                {{ if .Pre }}<i class="{{ .Pre }}" style="margin-right: 8px;"></i>{{ end }}{{ .Name }}
+                            </a>
                         {{ end }}
                         {{ range sort .Site.Params.social "key" }}
                             <a href="{{ .url | safeURL }}">

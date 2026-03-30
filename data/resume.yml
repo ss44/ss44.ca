@@ -27,9 +27,11 @@ skills:
   - category: "Frameworks"
     items:
       - "Ruby on Rails"
-      - "ExpressJS, NestJS"
-      - "VueJS, React"
-      - "ElectronJS"
+      - "ExpressJS"
+      - "Vue"
+      - "React"
+      - "Electron"
+      - "Nuxt"
 
   - category: "DevOps"
     items:
