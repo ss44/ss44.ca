@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "Shajinder Singh Padda | Senior Systems Architect & Full Stack Developer"
 +++
 
 I am Shajinder Singh Padda.
