@@ -1,112 +1,315 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="{{ "css/resume/normalize.css" | relURL }}" />
-    <link rel="stylesheet" type="text/css" href="{{ "css/resume/fontawesome/css/font-awesome.css" | relURL }}" />
-    <link rel="stylesheet" type="text/css" href="{{ "css/resume/resume.css" | relURL }}" />
-  </head>
-  <body lang="en">
-    <section id="main">
-      <header id="title">
+{{ define "main" }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .resume-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        font-family: inherit;
+        color: var(--text-color, inherit);
+    }
+    
+    .resume-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .resume-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    
+    .resume-header .subtitle {
+        font-size: 1.2rem;
+        color: #888;
+    }
+
+    .resume-section {
+        margin-bottom: 3rem;
+    }
+
+    .resume-section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: var(--text-color, inherit);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #444;
+        padding-bottom: 0.5rem;
+    }
+    
+    .resume-section-title i {
+        color: #888;
+    }
+
+    .timeline-block {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-date {
+        flex: 0 0 120px;
+        text-align: right;
+        padding-right: 20px;
+        font-size: 0.9rem;
+        color: #888;
+        padding-top: 5px;
+    }
+
+    .timeline-date span {
+        display: block;
+    }
+
+    .timeline-decorator {
+        flex: 0 0 0;
+        position: relative;
+        width: 2px;
+        border-left: 1px solid #555;
+    }
+
+    .timeline-decorator::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -5.5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--bg-color, #1a1a1a); /* Adjust for theme background */
+        border: 2px solid #888;
+        z-index: 1;
+    }
+
+    .timeline-details {
+        flex: 1;
+        padding-left: 25px;
+        padding-top: 2px;
+    }
+
+    .timeline-details h3 {
+        font-size: 1.2rem;
+        margin: 0 0 0.2rem 0;
+        font-weight: 600;
+    }
+
+    .timeline-place {
+        font-size: 0.95rem;
+        color: #aaa;
+        margin-bottom: 0.8rem;
+        display: inline-block;
+    }
+
+    .timeline-details ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .timeline-details li {
+        margin-bottom: 0.4rem;
+        line-height: 1.5;
+        color: var(--text-color, #ccc);
+    }
+    
+    .resume-sidebar-section {
+        margin-top: 3rem;
+    }
+
+    .resume-sidebar-section h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #444;
+        padding-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .skills-category h3 {
+        font-size: 1.1rem;
+        margin: 0 0 0.8rem 0;
+        text-transform: capitalize;
+        border-bottom: 1px solid #444;
+        padding-bottom: 0.3rem;
+    }
+
+    .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .skills-list li {
+        background-color: #333;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.9rem;
+    }
+
+    .contact-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .contact-list li {
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-list i {
+        color: #888;
+        width: 20px;
+        text-align: center;
+    }
+
+    .content .resume-wrapper {
+        text-align: left;
+    }
+
+    .content .resume-section.summary .timeline-details p {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    @media (max-width: 768px) {
+        .timeline-block {
+            flex-direction: column;
+        }
+        .timeline-date {
+            text-align: left;
+            padding-right: 0;
+            padding-bottom: 10px;
+            flex: auto;
+        }
+        .timeline-date span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .timeline-decorator {
+            display: none; /* Hide decorator line on mobile */
+        }
+        .timeline-details {
+            padding-left: 0;
+            border-left: 2px solid #444;
+            padding-left: 15px;
+            margin-left: 5px;
+        }
+    }
+</style>
+
+<div class="resume-wrapper">
+    <header class="resume-header">
         <h1>{{ .Site.Data.resume.personal.name }}</h1>
-        <span class="subtitle">{{ .Site.Data.resume.personal.subtitle }}</span>
-      </header>
-      
-      {{ if .Site.Data.resume.summary }}
-      <section class="main-block summary" >
-        <h2>
-          <i class="fa fa-user"></i> Summary
-        </h2>
-        <section class="blocks">
-          <div class="date"></div>
-          <div class="decorator"></div>
-          <div class="details">
-            <div>{{ .Site.Data.resume.summary }}</div>
-          </div>
-        </section>
-      </section>
-      {{ end }}
+        <div class="subtitle">{{ .Site.Data.resume.personal.subtitle }}</div>
+    </header>
 
-      <section class="main-block">
-        <h2>
-          <i class="fa fa-suitcase"></i> Experiences
-        </h2>
-        {{ range .Site.Data.resume.experience }}
-        <section class="blocks">
-          <div class="date">
-            <span>{{ .start }}</span><span>{{ .end }}</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>{{ .title }}</h3>
-              {{ if .place }}<span class="place">{{ .place }}</span>{{ end }}
-            </header>
-            <div>
-              <ul>
-                {{ range .details }}
-                <li>{{ . }}</li>
-                {{ end }}
-              </ul>
+    {{ if .Site.Data.resume.summary }}
+    <section class="resume-section summary">
+        <h2 class="resume-section-title"><i class="fa fa-user"></i> Summary</h2>
+        <div class="timeline-block">
+            <div class="timeline-date"></div>
+            <div class="timeline-decorator"></div>
+            <div class="timeline-details">
+                <p>{{ .Site.Data.resume.summary }}</p>
             </div>
-          </div>
-        </section>
-        {{ end }}
-      </section>
-
-      <section class="main-block concise">
-        <h2>
-          <i class="fa fa-graduation-cap"></i> Education
-        </h2>
-        {{ range .Site.Data.resume.education }}
-        <section class="blocks">
-          <div class="date">
-            <span>{{ .start }}</span><span>{{ .end }}</span>
-          </div>
-          <div class="decorator">
-          </div>
-          <div class="details">
-            <header>
-              <h3>{{ .title }}</h3>
-              {{ if .place }}<span class="place">{{ .place }}</span>{{ end }}
-            </header>
-            <div>{{ .details }}</div>
-          </div>
-        </section>
-        {{ end }}
-      </section>
+        </div>
     </section>
-    <aside id="sidebar">
-      <div class="side-block" id="contact">
-        <h1>
-          Contact Info
-        </h1>
-        <ul>
-          {{ range .Site.Data.resume.personal.contact }}
-          <li><i class="fa {{ .icon }}"></i> {{ .text }}</li>
-          {{ end }}
-        </ul>
-      </div>
-      <div class="side-block" id="skills">
-        <h1>
-          Skills
-        </h1>
-        {{ range .Site.Data.resume.skills }}
-        <div class="skill-category">
-          <h2 style="font-size: 10pt; text-transform: capitalize; margin: 10px 0 5px; color: #555;">{{ .category }}</h2>
-          <ul>
-            {{ range .items }}
-            <li>{{ . }}</li>
+    {{ end }}
+
+    <section class="resume-section">
+        <h2 class="resume-section-title"><i class="fa fa-code"></i> Skills</h2>
+        <div class="skills-grid">
+            {{ range .Site.Data.resume.skills }}
+            <div class="skills-category">
+                <h3>{{ .category }}</h3>
+                <ul class="skills-list">
+                    {{ range .items }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
             {{ end }}
-          </ul>
+        </div>
+    </section>
+
+    <section class="resume-section">
+        <h2 class="resume-section-title"><i class="fa fa-suitcase"></i> Experiences</h2>
+        {{ range .Site.Data.resume.experience }}
+        <div class="timeline-block">
+            <div class="timeline-date">
+                <span>{{ .start }}</span>
+                <span>{{ .end }}</span>
+            </div>
+            <div class="timeline-decorator"></div>
+            <div class="timeline-details">
+                <h3>{{ .title }}</h3>
+                {{ if .place }}<span class="timeline-place">{{ .place }}</span>{{ end }}
+                <ul>
+                    {{ range .details }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
         </div>
         {{ end }}
-      </div>
-      <!-- <div class="side-block" id="disclaimer">
-        This r&eacute;sum&eacute; was generated with Hugo.
-      </div> -->
-    </aside>
-  </body>
-</html>
+    </section>
+
+    <section class="resume-section">
+        <h2 class="resume-section-title"><i class="fa fa-graduation-cap"></i> Education</h2>
+        {{ range .Site.Data.resume.education }}
+        <div class="timeline-block">
+            <div class="timeline-date">
+                <span>{{ .start }}</span>
+                <span>{{ .end }}</span>
+            </div>
+            <div class="timeline-decorator"></div>
+            <div class="timeline-details">
+                <h3>{{ .title }}</h3>
+                {{ if .place }}<span class="timeline-place">{{ .place }}</span>{{ end }}
+                <p>{{ .details }}</p>
+            </div>
+        </div>
+        {{ end }}
+    </section>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 3rem;">
+        <div class="resume-sidebar-section" style="flex: 1; min-width: 250px;">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                {{ range .Site.Data.resume.personal.contact }}
+                <li><i class="fa {{ .icon }}"></i> {{ .text }}</li>
+                {{ end }}
+                {{ range sort .Site.Params.social "key" }}
+                <li><i class="{{ .icon }}"></i> <a href="{{ .url }}" style="color: inherit; text-decoration: none;" {{ if .target }}target="{{ .target }}"{{ end }}>{{ .url | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}

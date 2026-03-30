@@ -2,6 +2,7 @@ baseURL = 'https://ss44.ca/'
 locale = 'en-ca'
 title = 'Shajinder Singh Padda'
 theme = "hugo-theme-nightfall"
+ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
 
 [menu]
 #  [[menu.header]]
