@@ -128,10 +128,37 @@
         padding-bottom: 0.5rem;
     }
 
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .skills-category h3 {
+        font-size: 1.1rem;
+        margin: 0 0 0.8rem 0;
+        text-transform: capitalize;
+        border-bottom: 1px solid #444;
+        padding-bottom: 0.3rem;
+    }
+
     .skills-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
         padding: 0;
         list-style: none;
     }
@@ -216,6 +243,22 @@
     {{ end }}
 
     <section class="resume-section">
+        <h2 class="resume-section-title"><i class="fa fa-code"></i> Skills</h2>
+        <div class="skills-grid">
+            {{ range .Site.Data.resume.skills }}
+            <div class="skills-category">
+                <h3>{{ .category }}</h3>
+                <ul class="skills-list">
+                    {{ range .items }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+
+    <section class="resume-section">
         <h2 class="resume-section-title"><i class="fa fa-suitcase"></i> Experiences</h2>
         {{ range .Site.Data.resume.experience }}
         <div class="timeline-block">
@@ -256,15 +299,6 @@
     </section>
 
     <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 3rem;">
-        <div class="resume-sidebar-section" style="flex: 1; min-width: 250px;">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                {{ range .Site.Data.resume.skills }}
-                <li>{{ . }}</li>
-                {{ end }}
-            </ul>
-        </div>
-
         <div class="resume-sidebar-section" style="flex: 1; min-width: 250px;">
             <h2>Contact</h2>
             <ul class="contact-list">

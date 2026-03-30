@@ -93,11 +93,16 @@
         <h1>
           Skills
         </h1>
-        <ul>
-          {{ range .Site.Data.resume.skills }}
-          <li>{{ . }}</li>
-          {{ end }}
-        </ul>
+        {{ range .Site.Data.resume.skills }}
+        <div class="skill-category">
+          <h2 style="font-size: 10pt; text-transform: capitalize; margin: 10px 0 5px; color: #555;">{{ .category }}</h2>
+          <ul>
+            {{ range .items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
       </div>
       <!-- <div class="side-block" id="disclaimer">
         This r&eacute;sum&eacute; was generated with Hugo.

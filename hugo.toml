@@ -9,10 +9,15 @@ theme = "hugo-theme-nightfall"
 #    weight = 0
 #    url = "notes"
 
-#  [[menu.header]]
-#    name = "resume"
-#    weight = 2
-#    url = "resume.pdf"
+  [[menu.header]]
+    name = "resume.html"
+    weight = 2
+    url = "resume"
+
+  [[menu.header]]
+    name = "resume.pdf"
+    weight = 3
+    url = "resume.pdf"
 
 [params]
 user = "shajinder"

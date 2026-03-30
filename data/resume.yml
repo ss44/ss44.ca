@@ -8,15 +8,36 @@ personal:
 summary: "Senior Systems Architect and Full Stack Developer with 20+ years of experience specializing in architecting and scaling high-volume, security and privacy focussed web applications."
 
 skills:
-  - "Ruby (Rails, Grape)"
-  - "Typescript, Javascript (NodeJS, VueJS, React)"
-  - "PHP, Python, Java"
-  - "Postgres, Redis, MySQL, MongoDB, Sqlite"
-  - "CSS/SCSS (Bootstrap) , HTML5"
-  - "Containerization (Docker, Kubernetes)"
-  - "Linux/Unix Systems Administration"
-  - "CI/CD Scripting (Bash, Fish, Jenkins)"
-  - "AWS, Google Cloud, Digital Ocean"
+  - category: "Languages"
+    items:
+      - "Ruby"
+      - "Javascript/Typescript"
+      - "PHP"
+      - "Python"
+      - "Java"
+      
+  - category: "Databases"
+    items:
+      - Postgres
+      - Redis
+      - MySQL
+      - MongoDB
+      - Sqlite
+
+  - category: "Frameworks"
+    items:
+      - "Ruby on Rails"
+      - "ExpressJS, NestJS"
+      - "VueJS, React"
+      - "ElectronJS"
+
+  - category: "DevOps"
+    items:
+      - "Docker"
+      - "Kubernetes"
+      - "Linux/Unix Systems Administration"
+      - "CI/CD Scripting (Bash, Fish, Jenkins)"
+      - "AWS, Google Cloud, Digital Ocean"
 
 experience:
   - start: "2022"
