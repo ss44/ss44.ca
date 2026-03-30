@@ -1,6 +1,6 @@
 +++
-title = "Shinda's Resume"
-layout = "resume-web"
+title = "Shajinder Padda Resume"
+layout = "resume"
 type = "resume"
 +++
 

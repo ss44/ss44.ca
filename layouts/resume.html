@@ -302,8 +302,22 @@
         <div class="resume-sidebar-section" style="flex: 1; min-width: 250px;">
             <h2>Contact</h2>
             <ul class="contact-list">
+                {{ $socialUrls := slice }}
+                {{ range .Site.Params.social }}
+                    {{ $socialUrls = $socialUrls | append .url }}
+                {{ end }}
+                
                 {{ range .Site.Data.resume.personal.contact }}
-                <li><i class="fa {{ .icon }}"></i> {{ .text }}</li>
+                    {{ $isDuplicate := false }}
+                    {{ $contactText := .text }}
+                    {{ range $socialUrls }}
+                        {{ if in . $contactText }}
+                            {{ $isDuplicate = true }}
+                        {{ end }}
+                    {{ end }}
+                    {{ if not $isDuplicate }}
+                    <li><i class="fa {{ .icon }}"></i> {{ .text }}</li>
+                    {{ end }}
                 {{ end }}
                 {{ range sort .Site.Params.social "key" }}
                 <li><i class="{{ .icon }}"></i> <a href="{{ .url }}" style="color: inherit; text-decoration: none;" {{ if .target }}target="{{ .target }}"{{ end }}>{{ .url | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></li>

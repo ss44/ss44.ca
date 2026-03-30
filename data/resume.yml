@@ -4,10 +4,13 @@ personal:
   contact:
     - icon: "fa-envelope"
       text: "ss@ss44.ca"
-    # - icon: "fa-linkedin"
-    #   text: "linkedin.com/in/shajinder-singh-padda"
+    - icon: "fa-globe"
+      text: "ss44.ca"
     - icon: "fa-github"
       text: "github.com/ss44"
+    - icon: "fa-linkedin"
+      text: "linkedin.com/in/ss44"
+
 
 summary: "Senior Systems Architect and Full Stack Developer with 20+ years of experience specializing in architecting and scaling high-volume, security and privacy focused web applications."
 
