@@ -27,7 +27,10 @@ const fonts = [
   { file: 'NotoSans-Italic.ttf', url: 'https://github.com/notofonts/notofonts.github.io/raw/main/fonts/NotoSans/hinted/ttf/NotoSans-Italic.ttf' },
   { file: 'NotoSerif-Regular.ttf', url: 'https://github.com/notofonts/notofonts.github.io/raw/main/fonts/NotoSerif/hinted/ttf/NotoSerif-Regular.ttf' },
   { file: 'NotoSerif-Medium.ttf', url: 'https://github.com/notofonts/notofonts.github.io/raw/main/fonts/NotoSerif/hinted/ttf/NotoSerif-Medium.ttf' },
-  { file: 'NotoSerif-Bold.ttf', url: 'https://github.com/notofonts/notofonts.github.io/raw/main/fonts/NotoSerif/hinted/ttf/NotoSerif-Bold.ttf' }
+  { file: 'NotoSerif-Bold.ttf', url: 'https://github.com/notofonts/notofonts.github.io/raw/main/fonts/NotoSerif/hinted/ttf/NotoSerif-Bold.ttf' },
+  { file: 'fa-solid-900.ttf', url: 'https://github.com/FortAwesome/Font-Awesome/raw/6.5.2/webfonts/fa-solid-900.ttf' },
+  { file: 'fa-regular-400.ttf', url: 'https://github.com/FortAwesome/Font-Awesome/raw/6.5.2/webfonts/fa-regular-400.ttf' },
+  { file: 'fa-brands-400.ttf', url: 'https://github.com/FortAwesome/Font-Awesome/raw/6.5.2/webfonts/fa-brands-400.ttf' }
 ];
 
 if (pdfMTime < typstMTime || pdfMTime < yamlMTime) {

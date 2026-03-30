@@ -1,4 +1,5 @@
 #import "@preview/fontawesome:0.6.0": *
+#fa-version("6")
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 // Edit these values to customize the look and feel of your resume.
