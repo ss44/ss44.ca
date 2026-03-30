@@ -135,7 +135,7 @@
     column-gutter: 2em,
     align: center,
     ..resume-data.personal.contact.map(c => [
-      #text(fill: accent)[#fa-icon(c.icon.replace("fa-", ""), font: "Font Awesome 7 Free Solid")] #if c.text.contains("@") { link("mailto:" + c.text)[#c.text] } else { link(c.text)[#c.text] }
+      #text(fill: accent)[#fa-icon(c.icon.replace("fa-", ""))] #if c.text.contains("@") { link("mailto:" + c.text)[#c.text] } else { link(c.text)[#c.text] }
     ])
   )
 ]
