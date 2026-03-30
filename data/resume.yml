@@ -15,7 +15,8 @@ skills:
   - category: "Languages"
     items:
       - "Ruby"
-      - "JavaScript/TypeScript"
+      - "JavaScript"
+      - "TypeScript"
       - "PHP"
       - "Python"
       - "Java"
