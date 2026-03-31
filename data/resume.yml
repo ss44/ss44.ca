@@ -63,6 +63,7 @@ experience:
       - "Designed and implemented a high volume caching system and data sync with sister systems used in authentication. (Ruby, Postgres, Solace)."
       - "Worked directly with our support teams to help migrate legacy clients to new optimized flows, writing custom utility scripts and data handling procedures in production. (Ruby, Jenkins)"
       - "Implemented backend authentication logic for vendor side integration to internal systems (JWT, Ruby)"
+      - "Developed AI-driven agent scripts to augment daily engineering workflows, acting as a force multiplier for the development team."
       - "Ensured systems architecture and data integration pipelines maintained strict compliance with Canadian PIPEDA/PHIPA privacy regulations regarding electronic health records."
       - "Performed and participated in peer code reviews (Ruby, React, TypeScript, Postgres)"
   - start: "2015"
