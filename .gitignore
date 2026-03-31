@@ -24,3 +24,4 @@ fonts/
 .netlify
 typst
 fonts/
+.env

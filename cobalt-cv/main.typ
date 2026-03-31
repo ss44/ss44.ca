@@ -131,11 +131,17 @@
   // Update the four links below with your own URLs and display text.
   // Icons are provided by Font Awesome — replace icon names as needed.
   // See: https://fontawesome.com/icons
+  #let phone-input = sys.inputs.at("phone", default: none)
+  #let contacts = resume-data.personal.contact
+  #if phone-input != none {
+    contacts = ((icon: "fa-phone", text: phone-input), ..contacts)
+  }
+
   #grid(
-    columns: resume-data.personal.contact.len(),
+    columns: contacts.len(),
     column-gutter: 2em,
     align: center,
-    ..resume-data.personal.contact.map(c => [
+    ..contacts.map(c => [
       #text(fill: accent)[#fa-icon(c.icon.replace("fa-", ""))] #if c.text.contains("@") { link("mailto:" + c.text)[#c.text] } else { link(c.text)[#c.text] }
     ])
   )

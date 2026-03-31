@@ -75,8 +75,18 @@ if (pdfMTime < typstMTime || pdfMTime < yamlMTime) {
   }
 
   try {
+    let inputArgs = "";
+    const envPath = path.join(__dirname, '.env');
+    if (fs.existsSync(envPath)) {
+      const envContent = fs.readFileSync(envPath, 'utf8');
+      const match = envContent.match(/^RESUME_PHONE=["']?(.*?)["']?$/m);
+      if (match && match[1]) {
+        inputArgs = `--input phone="${match[1]}"`;
+      }
+    }
+
     // Compile using the appropriate command
-    execSync(`${typstCmd} compile --root . --font-path fonts "${typstPath}" "${pdfPath}"`, { stdio: 'inherit' });
+    execSync(`${typstCmd} compile --root . --font-path fonts ${inputArgs} "${typstPath}" "${pdfPath}"`, { stdio: 'inherit' });
     console.log('PDF generated at public/resume.pdf');
   } catch (error) {
     console.error('Error generating PDF with Typst:', error.message);
