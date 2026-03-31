@@ -68,7 +68,6 @@ experience:
       - "Scaled back-end operations to handle direct, high-volume data integration with partner vendors. (Ruby, Sidekiq, Redis)"
       - "Worked within a team to upgrade our eligibility handling microservices, scaling from handling 5,000 transactions in minutes to a concurrent batch processing system capable of handling 1M+. (NodeJS, TypeScript, Redis, BullMQ)"
       - "Architected a high-volume Event-Driven data synchronization pipeline using Solace and Ruby, enabling real-time authentication consistency across systems."
-      - "Designed and implemented a high volume caching system and data sync with sister systems used in authentication. (Ruby, Postgres, Solace)."
       - "Worked directly with our support teams to help migrate legacy clients to new optimized flows, writing custom utility scripts and data handling procedures in production. (Ruby, Jenkins)"
       - "Implemented backend authentication logic for vendor side integration to internal systems (JWT, Ruby)"
       - "Integrated AI tools and custom agent scripts into the development pipeline to assist with routine tasks and improve workflow efficiency."
