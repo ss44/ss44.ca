@@ -43,10 +43,10 @@ skills:
 
   - category: "Messaging & Integration"
     items:
-      - "Solace (Event Broker)"
+      - "Solace"
       - "BullMQ / Sidekiq"
       - "REST & GraphQL"
-      - "Event-Driven Architecture (EDA)"
+      - "Event-Driven Architecture"
 
   - category: "DevOps"
     items:
