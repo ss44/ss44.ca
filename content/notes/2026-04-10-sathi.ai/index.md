@@ -4,12 +4,12 @@ draft = false
 title = 'Sathi.ai: A Multi-Provider AI Desktop Client'
 +++
 
-**[Sathi.ai](https://github.com/ss44/Sathi.Ai)** is a Generative AI client plugin I built for [Dank Material Shell (DMS)](https://github.com/dank-material-shell/dms). It allows users to interact with multiple Large Language Models (LLMs) directly from their Linux desktop shell, bypassing the need to constantly context-switch into a browser.
+**[Sathi.ai](https://github.com/ss44/Sathi.Ai)** is a Generative AI client plugin I built for [Dank Material Shell (DMS)](https://github.com/AvengeMedia/DankMaterialShell). It allows users to interact with multiple Large Language Models (LLMs) directly from their Linux desktop shell, bypassing the need to constantly context-switch into a browser.
 
 {{< img src="https://github.com/user-attachments/assets/9721effc-c5e0-4269-8170-a4e0b8a95d02" alt="Sathi AI Interface" class="center" >}}
 
 ### The Motivation
-Over the last few months, I grew increasingly frustrated with Windows 11 and decided to transition my primary workstations to Arch Linux. During this shift, I discovered [Niri](https://github.com/YaLTeR/niri) (a scrollable-tiling Wayland compositor) and fell in love with Dank Material Shell—a clean, slightly opinionated, and highly customizable desktop environment.
+Over the last few months, I grew increasingly frustrated with Windows 11 and decided to transition my primary workstations to Arch Linux. During this shift, I discovered [Niri](https://github.com/niri-wm/niri) (a scrollable-tiling Wayland compositor) and fell in love with Dank Material Shell—a clean, slightly opinionated, and highly customizable desktop environment.
 
 While the ecosystem was fantastic, I noticed a gap: I needed a fast, lightweight Linux AI client. I wanted something I could ping with a quick query instantly, rather than relying on heavy web wrappers. DMS's plugin system provided the perfect foundation, so I decided to build it myself.
 
