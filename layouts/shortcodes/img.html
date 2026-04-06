@@ -1,0 +1,28 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $class := .Get "class" | default "" }}
+{{ $resize := .Get "resize" }}
+{{ $img := .Page.Resources.GetMatch $src }}
+{{ if and $img $resize }}
+  {{/* Strip any trailing > from ImageMagick */}}
+  {{ $cleanResize := replace $resize ">" "" }}
+  {{/* If both width and height are provided, use Fit to resize proportionally within those bounds */}}
+  {{ if in $cleanResize "x" }}
+    {{ $parts := split $cleanResize "x" }}
+    {{ if and (ne (index $parts 0) "") (ne (index $parts 1) "") }}
+      {{ $img = $img.Fit $cleanResize }}
+    {{ else }}
+      {{ $img = $img.Resize $cleanResize }}
+    {{ end }}
+  {{ else }}
+    {{ $img = $img.Resize $cleanResize }}
+  {{ end }}
+{{ end }}
+
+<figure class="{{ $class }}">
+  {{ if $img }}
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" />
+  {{ else }}
+    <img src="{{ $src }}" alt="{{ $alt }}" />
+  {{ end }}
+</figure>

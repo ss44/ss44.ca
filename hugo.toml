@@ -5,10 +5,11 @@ theme = "hugo-theme-nightfall"
 ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
 
 [menu]
-#  [[menu.header]]
-#    name = "notes"
-#    weight = 0
-#    url = "notes"
+  [[menu.header]]
+    name = "notes"
+    weight = 0
+    url = "notes"
+    pre = "fa-solid fa-note-sticky"
 
   [[menu.header]]
     name = "resume.html"
