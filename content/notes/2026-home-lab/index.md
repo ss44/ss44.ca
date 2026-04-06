@@ -18,7 +18,7 @@ categories:
 - Technology
 bluesky_post_url: ''
 fmContentType: post
-canonicalUrl: https://shindasingh.com/2026/04/05/2026-home-lab/
+canonicalUrl: https://shindasingh.com/2026-home-lab/
 ---
 
 
