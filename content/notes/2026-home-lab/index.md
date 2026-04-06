@@ -93,7 +93,7 @@ I had to take Lastpass out back last year with the shovel and after having been 
 
 But honestly VW which is just a Bitwarden implementation in Rust hasn't made me miss a beat. Plugins all work. It's secure. It's good.
 
-![Thumbs up gif](https://media.giphy.com/media/111ebonMs90YLu/giphy.gif){: .center}
+{{<img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" class="center" alt="thumbs up gif" resize="600x600" size="600x600">}}
 
 ### Photo Editing- [DXO Labs](https://www.dxo.com/) 
 
