@@ -1,50 +1,43 @@
 +++
-title = '2026 04 07 Ss44 Ca'
+title = 'SS44.ca: Building a Resume as Code'
 date = 2026-04-06T17:32:26-04:00
-draft = true
+draft = false
+tags = ["Hugo", "Typst", "CI/CD", "Web Development"]
+categories = ["Portfolio", "Engineering"]
 +++
 
-**[SS44.CA - This Site!](https://github.com/ss44/ss44.ca)** is a professional landing page for well me. Its a place to host my resume and post some technical notes describing projects to well advertise me?
+**[ss44.ca](https://github.com/ss44/ss44.ca)** is my professional landing page and digital garden. It's a place to host my resume, document my homelab, and highlight some technical projects to advertise my skills.
 
-{{</* img src="screenshot.png" alt="Project Interface" class="center" resize="800x800" */>}}
+{{< img src="screenshot.png" alt="ss44.ca home page in 2026" class="center" >}}
 
 ### The Motivation
-I don't even know if professional websites are still a thing or are something from a bygone era. But, I remember them being a thing at least when I graduated with our career councillors telling us - _"at least be able to prove you can do some of what you say you can by having a domain with some of what you say you do, on it."_ 
+I don't even know if professional personal websites are still a primary requirement, or if they are a relic of a bygone era. However, I vividly remember career counselors emphasizing: _"at least be able to prove you can do some of what you say you can, by having a domain with some of what you say you do on it."_ 
 
-Not sure how true that sentiment still rings but it's been a while since I've been actively in the market and whatever site I had prior has long been lost to the abyss of time, lost in some foreign self stored git repo.
+It's been a while since I've been actively in the job market, and whatever site I had prior has long been lost to the abyss of time, stranded on some forgotten self-hosted Git server. So I thought I'd spin up a new one—because why not?
 
-So I thought I'd spin up a new one - because well why not?
+I won't pretend to have a plethora of massive open-source contributions I can proudly stick on this proverbial magnetic fridge. Since most of my professional work is hidden away behind proprietary code and NDAs, the least I could do is put my architecture skills on display while creating a foundation to post future technical notes.
 
-I'm not one to pretend that I have some plethroa of opensource contributions that I can proudly display or put on this proverebial magenetic frige, to really make me shine. Since most of my professional work is hidden away behind propreitry code and NDA's the least I could do is put on display my unfethered wit' while also attempting to create some kind of basis to post future work, or notes of technical nature?
-
-At the very least maybe try my hardest to prove I'm not an agentic AI bot that just spams resume sites.
-
-As the saying that I goes - I exist because I have a domain name that says I do.
+At the very least, it proves I'm not just an agentic AI bot spamming resume sites. As the saying goes: I exist, because I have a domain name that says I do.
 
 ### Architecture & Tech Stack
-So what have we here,  _"a wordpress site? With some fancy plugins?"_ **NOPE**
+So what do we have here? _"A WordPress site? With some fancy plugins?"_ **NOPE.**
 
-* **Core Technology:**: Markdown. Yup Markdown. Plain .md files. I was big on em before AI, and refuse to let them take my shine.
-
-* **Tools**: 
-    * Hugo - static site generator. While I've always used Jekyll in the past for all my websites as of late, I've read great things about Hugo. 
-    * Typst - Where has this been hiding my whole career? Long gone are running html to pdf converters, or using pupeteer. 
+*   **Core Data:** Markdown and YAML. I was big on plain text files before AI made them cool again, and I refuse to let them steal my shine.
+*   **Static Site Generator (SSG):** [Hugo](https://gohugo.io/). While I've used Jekyll heavily in the past, Hugo's Go-based architecture offers significantly better build times and superior asset management (like Page Bundles).
+*   **Document Generation:** [Typst](https://typst.app/). Where has this been hiding my whole career? Long gone are the days of hacking HTML-to-PDF converters or managing heavy Puppeteer dependencies just to render a document.
+*   **Migration Engine:** Custom Python scripts to automatically ingest old legacy Jekyll posts, parse Frontmatter, dynamically resize images, and rewrite paths to fit the modern Hugo ecosystem.
 
 ### Development Process & Challenges
-The real sauce here isn't that this is a static site generator. Wooptie doo..
-It's that the resume.html and resume.pdf are both generated from the same `yml` file. 
+The real engineering sauce here isn't just that it's a static site generator. The true value is treating my **Resume as Code**.
 
-Which when said like that sounds underwhelming but having my resume exist in a text format within a git repo that auto-generates my pdf on deploy. 
+Both the `resume.html` page and the `resume.pdf` download are generated dynamically from the exact same underlying `resume.yml` data file. 
 
-Beats my old google doc resume in my books.
-
-Initially went with no image on the home screen but a designer friend recommended I have something there so we generated an AI image with some easter eggs.
+When explained like that, it might sound simple, but having my resume exist purely as structured text data within a Git repo—which automatically generates an updated, perfectly styled PDF via a CI/CD pipeline on every deploy—is a massive upgrade. It completely beats my old Google Docs workflow.
 
 ### What's Next
-- Try to publish a few tech posts here semi regularly to at least justify keeping this place around.
+*   **Consistency:** Try to publish technical posts here semi-regularly to justify keeping the domain around.
+*   **Expansion:** It was a fun distraction building this, and I leaned on AI tools to help write the migration scripts and clean up the CSS. I plan to document those AI integration workflows in future posts.
 
-- It was a fun distraction building this and I did lean on some AI tools to help update and clean things up. 
+_Note: The home page slide layout and aesthetics were heavily inspired by [mnjul.net](https://mnjul.net/)._
 
-- the layout was inspired by https://mnjul.net/ 
-
-[View the source code on GitHub &rarr;](https://github.com/ss44/ProjectName)
+[View the source code on GitHub &rarr;](https://github.com/ss44/ss44.ca)

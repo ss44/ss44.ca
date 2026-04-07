@@ -28,6 +28,10 @@ description = "Senior Systems Architect and Full Stack Developer with 20+ years 
 images = ["/meta-preview.png"]
 user = "ss"
 hostname = "ss44.ca"
+
+[params.author]
+  name = "Shajinder Singh Padda"
+
 rotating_titles = [
   "oh, hi.",
   "hello there.",
