@@ -290,10 +290,70 @@
             font-size: 1.1rem;
             font-weight: bold;
         }
+
+        .fab-download {
+            display: none !important;
+        }
+
+        .btn-download {
+            display: none !important;
+        }
     }
     
     .print-dialog {
         display: none;
+    }
+
+    .btn-download {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 15px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-download:hover {
+        background-color: #2980b9;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .btn-download i {
+        margin-right: 8px;
+    }
+
+    .fab-download {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #3498db;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        text-decoration: none;
+        z-index: 9999;
+        transition: all 0.3s ease;
+    }
+
+    .fab-download:hover {
+        background-color: #2980b9;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+        color: white;
     }
 </style>
 
@@ -304,6 +364,7 @@
     <header class="resume-header">
         <h1>{{ .Site.Data.resume.personal.name }}</h1>
         <div class="subtitle">{{ .Site.Data.resume.personal.subtitle }}</div>
+        <a href="/resume.pdf" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Download as PDF</a>
     </header>
 
     {{ if .Site.Data.resume.summary }}
@@ -403,4 +464,7 @@
         </div>
     </div>
 </div>
+<a href="/resume.pdf" class="fab-download" title="Download Resume as PDF" aria-label="Download Resume as PDF">
+    <i class="fa-solid fa-file-pdf"></i>
+</a>
 {{ end }}
