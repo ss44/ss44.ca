@@ -2,8 +2,8 @@
 title = 'Hire A Golfer'
 date = 2026-04-10
 draft = true
-tags = []
-categories = [] 
+tags = ["Career", "Mindset", "Opinion"]
+categories = ["Career"] 
 +++
 
 {{< img src="IMG_6395.JPG" alt="A Veteran Systems Develoepr playing golf in the Canadian Rockies" class="center" resize="1920x800" >}}

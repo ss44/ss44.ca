@@ -71,6 +71,11 @@ Always use the custom Hugo shortcode to ensure proportional resizing and proper 
 Ensure the frontmatter is complete before setting `draft = false`.
 Required fields: `title`, `date`, `draft`, `tags` (array), and `categories` (array).
 
+### Standard Categories & Tags
+To maintain consistency, try to use the following standard categories and tags where appropriate:
+*   **Categories:** `Engineering`, `Architecture`, `Portfolio`, `Homelab`, `Career`, `Opinion`
+*   **Tags:** `CI/CD`, `Web Development`, `Hugo`, `Typst`, `AI`, `System Design`, `Automation`, `Mindset`
+
 ---
 
 ## 4. CSS and Theming
