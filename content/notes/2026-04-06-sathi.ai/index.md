@@ -2,6 +2,8 @@
 date = '2026-04-06T15:34:34-04:00'
 draft = false
 title = 'Sathi.ai: A Multi-Provider AI Desktop Client'
+tags = ["AI", "System Design"]
+categories = ["Engineering", "Portfolio"]
 +++
 
 **[Sathi.ai](https://github.com/ss44/Sathi.Ai)** is a Generative AI client plugin I built for [Dank Material Shell (DMS)](https://github.com/AvengeMedia/DankMaterialShell). It allows users to interact with multiple Large Language Models (LLMs) directly from their Linux desktop shell, bypassing the need to constantly context-switch into a browser.
