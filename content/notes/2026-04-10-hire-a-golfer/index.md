@@ -27,3 +27,6 @@ If you’re looking for someone who isn't easily discouraged, is constantly work
 
 To that end, if you’re looking for a **Sr. Developer / Systems Architect** who is also a golfer, feel free to send me a message as I’m currently #opentowork.
 
+---
+*This article was originally published on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7448141084268015616/). Join the conversation there!*
+
