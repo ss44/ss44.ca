@@ -4,6 +4,7 @@ date = 2026-04-10
 draft = true
 tags = ["Career", "Mindset", "Opinion"]
 categories = ["Career"] 
+canonicalUrl = "https://www.linkedin.com/feed/update/urn:li:activity:7448141084268015616/"
 +++
 
 {{< img src="IMG_6395.JPG" alt="A Veteran Systems Develoepr playing golf in the Canadian Rockies" class="center" resize="1920x800" >}}
