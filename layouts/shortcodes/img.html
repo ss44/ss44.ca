@@ -21,8 +21,8 @@
 
 <figure class="{{ $class }}">
   {{ if $img }}
-    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" />
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" loading="lazy" />
   {{ else }}
-    <img src="{{ $src }}" alt="{{ $alt }}" />
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" />
   {{ end }}
 </figure>
