@@ -1,7 +1,7 @@
 +++
 title = 'Hire A Golfer'
 date = 2026-04-10
-draft = true
+draft = false
 tags = ["Career", "Mindset", "Opinion"]
 categories = ["Career"] 
 canonicalUrl = "https://www.linkedin.com/feed/update/urn:li:activity:7448141084268015616/"
