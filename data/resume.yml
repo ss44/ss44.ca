@@ -55,6 +55,13 @@ skills:
       - "Linux/Unix Systems Administration"
       - "CI/CD Scripting (Bash, Fish, Jenkins)"
       - "AWS, Google Cloud, Digital Ocean"
+      - "Datadog"
+
+  - category: "AI & Tooling"
+    items:
+      - "LLM API Integration (OpenAI, Anthropic, Gemini)"
+      - "AI-Assisted Development (Cursor, Kilo)"
+      - "Custom Agent Scripting"
 
 experience:
   - start: "2022"
@@ -68,7 +75,7 @@ experience:
       - "Scaled back-end operations to handle direct, high-volume data integration with partner vendors. (Ruby, Sidekiq, Redis)"
       - "Worked within a team to upgrade our eligibility handling microservices, scaling from handling 5,000 transactions in minutes to a concurrent batch processing system capable of handling 1M+. (NodeJS, TypeScript, Redis, BullMQ)"
       - "Architected a high-volume Event-Driven data synchronization pipeline using Solace and Ruby, enabling real-time authentication consistency across systems."
-      - "Worked directly with our support teams to help migrate legacy clients to new optimized flows, writing custom utility scripts and data handling procedures in production. (Ruby, Jenkins)"
+      - "Worked directly with our support teams to migrate legacy clients to new optimized flows, writing custom utility scripts and triaging issues in production. (Ruby, Jenkins, Datadog)"
       - "Implemented backend authentication logic for vendor side integration to internal systems (JWT, Ruby)"
       - "Integrated AI tools and custom agent scripts into the development pipeline to assist with routine tasks and improve workflow efficiency."
       - "Ensured systems architecture and data integration pipelines maintained strict compliance with Canadian PIPEDA/PHIPA privacy regulations regarding electronic health records."
