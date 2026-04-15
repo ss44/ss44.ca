@@ -1,7 +1,7 @@
 +++
 title = "Architecting Live Events: Charity Tournaments & Broadcast Infrastructure"
 date = 2026-04-12T00:00:00Z
-draft = false
+draft = true
 categories = ["Engineering", "Portfolio", "Community"]
 tags = ["Automation", "System Design", "Livestreaming", "Streamer.bot", "A/V Routing"]
 +++
