@@ -70,8 +70,8 @@ experience:
     end: "2026"
     title: "Sr. Developer Analyst"
     place: "Telus Health (Virtual Care)"
+    tech: "Ruby on Rails, Node.js, TypeScript, PostgreSQL, GraphQL, Redis, BullMQ, Solace, Jenkins, Datadog, React"
     details:
-      - "Tech Stack: Ruby on Rails, Node.js, TypeScript, PostgreSQL, GraphQL, Redis, BullMQ, Solace, Jenkins, Datadog, React"
       - "Architected and implemented highly scalable product modules within a Ruby/Postgres backend monolith."
       - "Migrated legacy REST API to GraphQL for the support administration portal."
       - "Optimized low-performing search queries (Postgres, Redis, Opensearch, Sequel ORM) to significantly reduce query memory load and execution time."
@@ -87,8 +87,8 @@ experience:
     end: "2022"
     title: "Sr. Web & Mobile Developer & Architect"
     place: "Mobile Fringe / Mall Maverick"
+    tech: "Ruby on Rails, Vue.js, Electron, C#, Kubernetes, AWS (EC2, S3, RDS), Java, Objective-C"
     details:
-      - "Tech Stack: Ruby on Rails, Vue.js, Electron, C#, Kubernetes, AWS (EC2, S3, RDS), Java, Objective-C"
       - "Led migration of a legacy proprietary CMS from Rails 3 to a Rails 5 API backend, implementing a secure REST API and a modern VueJS/HTML5 front end."
       - "Maintained and scaled mission-critical internal billing software for a Top-3 Canadian telecommunications provider, ensuring high availability and secure transaction handling."
       - "Developed, maintained and deployed shopping centre directory board mapping apps to various malls across North America. (ElectronJS, C#)"
@@ -101,8 +101,8 @@ experience:
     end: "2015"
     title: "Sr. Web & Mobile Developer"
     place: "Pause Productions"
+    tech: "PHP, Java, REST/SOAP APIs, Git, Subversion, Jira, Android, iOS"
     details:
-      - "Tech Stack: PHP, Java, REST/SOAP APIs, Git, Subversion, Jira, Android, iOS"
       - "Architected proprietary ERP systems and e-commerce solutions integrated with major marketplaces (Amazon, eBay), couriers, and payment gateways."
       - "Developed custom middleware, REST SDKs, and CMS plugins to bridge public platforms, legacy databases, and EDI/SOAP/JSON APIs."
       - "Managed system stability by automating CI/CD pipelines, deploying cloud backup solutions, and conducting security patch audits."
@@ -111,8 +111,8 @@ experience:
     end: "2022"
     title: "Early Career & Consulting"
     place: "Independent Contractor"
+    tech: "Ruby on Rails, AWS, WordPress, Shopify, VPN, Linux/Unix System Administration"
     details:
-      - "Tech Stack: Ruby on Rails, AWS, WordPress, Shopify, VPN, Linux/Unix System Administration"
       - "Developed MVPs for early startups in Rails and built custom e-commerce sites using WordPress and Shopify."
       - "Designed secure internal networks (VPN/LAN), document management systems, and managed hardware procurement."
       - "Executed mission-critical data migrations, server setups, and system recovery for small business clients."

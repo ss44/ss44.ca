@@ -63,6 +63,7 @@
   location,
   dates,
   bullets,
+  tech: none,
 ) = [
   #block(breakable: false)[
     == #text(fill: accent)[#company]
@@ -70,8 +71,17 @@
     #grid(
       columns: (1fr, 1fr),
       align: (left, right),
-      [ #emph[#role] ], [ #emph[#if location != "" [#location | ]#dates] ],
+      [ #emph[#role] ], 
+      [ #emph[#if location != "" [#location | ]#dates] ],
     )
+
+    #if tech != none [
+      #v(0.1em)
+      #line(length: 100%, stroke: (dash: "dashed", paint: rgb("#cccccc"), thickness: 0.5pt))
+      #v(0.1em)
+      #text(size: 8.5pt, fill: rgb("#555555"))[#emph[Stack: ] #tech]
+      #v(0.1em)
+    ]
 
     #if bullets != none and bullets.len() > 0 {
       [- #bullets.at(0)]
@@ -201,6 +211,7 @@
         "",
         exp.start + " – " + exp.end,
         exp.details,
+        tech: exp.at("tech", default: none),
       )
     }
 
