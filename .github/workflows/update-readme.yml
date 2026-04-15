@@ -20,8 +20,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Build Hugo Site
-        uses: docker://ghcr.io/gohugoio/hugo:v0.160.1
+        uses: docker://ghcr.io/gohugoio/hugo:v0.160.1-ext-debian
         with:
           args: --minify
 
