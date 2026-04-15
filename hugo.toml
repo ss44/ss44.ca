@@ -51,3 +51,13 @@ name = "linkedIn"
 url = "https://www.linkedin.com/in/ss44"
 aria = "LinkedIn Profile"
 icon = "fa-brands fa-linkedin"
+
+[outputs]
+  home = ["HTML", "RSS", "README"]
+
+[outputFormats]
+  [outputFormats.README]
+    mediaType = "text/markdown"
+    baseName = "README"
+    isPlainText = true
+    isHTML = false

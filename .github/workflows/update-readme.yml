@@ -1,0 +1,43 @@
+name: Update GitHub Profile README
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'data/resume.yml'
+      - 'content/notes/**'
+      - 'layouts/index.readme.md'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Website Repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Hugo Site
+        run: hugo --minify
+
+      - name: Push to Profile Repo
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.PROFILE_REPO_TOKEN }}
+        with:
+          source_file: 'public/readme.md'
+          destination_repo: 'ss44/ss44'
+          destination_folder: '/'
+          destination_branch: 'main'
+          rename: 'README.md'
+          user_email: 'ss@ss44.ca'
+          user_name: 'Shajinder Singh Padda'
+          commit_message: 'Auto-update README from ss44.ca digital garden'
