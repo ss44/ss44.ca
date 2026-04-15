@@ -19,10 +19,17 @@ jobs:
         with:
           submodules: true
 
-      - name: Build Hugo Site
-        uses: docker://hugomods/hugo:exts
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          args: --minify
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+
+      - name: Build Hugo Site
+        run: hugo --minify
 
       - name: Push to Profile Repo
         uses: dmnemec/copy_file_to_another_repo_action@main
