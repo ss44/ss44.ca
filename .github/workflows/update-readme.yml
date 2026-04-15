@@ -21,7 +21,7 @@ jobs:
           submodules: true
 
       - name: Build Hugo Site
-        uses: docker://ghcr.io/gohugoio/hugo:v0.160.1-ext
+        uses: docker://ghcr.io/gohugoio/hugo:v0.160.1
         with:
           args: --minify
 
