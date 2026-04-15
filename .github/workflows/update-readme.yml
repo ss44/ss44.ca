@@ -20,13 +20,10 @@ jobs:
         with:
           submodules: true
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Build Hugo Site
-        uses: docker://ghcr.io/gohugoio/hugo:v0.160.1-ext-debian
-        with:
-          args: --minify
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/project ghcr.io/gohugoio/hugo:v0.160.1 --minify
+          sudo chown -R $USER:$USER public/
 
       - name: Push to Profile Repo
         uses: dmnemec/copy_file_to_another_repo_action@main
