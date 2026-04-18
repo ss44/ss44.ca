@@ -23,9 +23,6 @@ images = ["/meta-preview.png"]
 user = "ss"
 hostname = "ss44.ca"
 
-[params.author]
-  name = "Shajinder Singh Padda"
-
 rotating_titles = [
   "oh, hi.",
   "hello there.",
@@ -34,6 +31,9 @@ rotating_titles = [
   "ola!"
 ]
 rotating_titles_duration = 5
+
+[params.author]
+  name = "Shajinder Singh Padda"
 
 [[params.social]]
 key = 0

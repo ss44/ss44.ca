@@ -123,10 +123,16 @@
                 z-index: 9999;
             }
         }
+
+        @keyframes slow-pan-zoom {
+            0% { transform: scale(1) translate(0, 0); }
+            50% { transform: scale(1.15) translate(-2%, 1%); }
+            100% { transform: scale(1) translate(0, 0); }
+        }
     </style>
 </head>
 <body class="texture">
-    <video loading="lazy" autoplay loop muted playsinline id="bg-video" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; object-fit: cover; pointer-events: none;">
+    <video loading="lazy" autoplay loop muted playsinline id="bg-video" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; object-fit: cover; pointer-events: none; animation: slow-pan-zoom 90s ease-in-out infinite;">
         <source src="/bg.webm" type="video/webm" >
     </video>
     <div id="bg-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background-color: rgba(0, 0, 0, 0.9); pointer-events: none;"></div>
