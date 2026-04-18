@@ -20,6 +20,16 @@
 * [**{{ .Title }}**]({{ .Permalink }}) - {{ .Date.Format "Jan 2, 2006" }}
 {{- end }}
 
+## 🧑‍🚀 /whoami
+{{ $profile := .Site.GetPage "page" "profile" }}
+{{ if $profile }}
+  {{ $chunks := split $profile.RawContent "\n### " }}
+  {{ $qas := after 1 $chunks }}
+  {{ range first 5 (shuffle $qas) }}
+### {{ . }}
+  {{ end }}
+{{ end }}
+
 ## 🔗 Quick Links
 {{ range .Site.Params.social }}
 * [{{ .name | title }}]({{ .url }})
