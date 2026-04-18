@@ -15,7 +15,7 @@ ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
     name = ".profile"
     weight = 1
     url = "profile"
-    pre = "fa-solid fa-user-astronaut"
+    pre = "fa-solid fa-user"
 
   [[menu.header]]
     name = "resume"
