@@ -12,6 +12,12 @@ ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
     pre = "fa-solid fa-note-sticky"
 
   [[menu.header]]
+    name = ".profile"
+    weight = 1
+    url = "profile"
+    pre = "fa-solid fa-user-astronaut"
+
+  [[menu.header]]
     name = "resume"
     weight = 2
     url = "resume"
