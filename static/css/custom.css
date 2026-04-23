@@ -10,3 +10,25 @@
         margin-left: 20px;
     }
 }
+/* List overrides */
+.postTitleBlock {
+  margin-bottom: 5px;
+}
+.postMetaGrid {
+  /* display: grid; */
+ /* grid-template-columns: 50% 50%; */
+  margin-bottom: 10px;
+  align-items: center;
+}
+.postMetaGrid .postDate {
+  /* float: none; */
+  text-align: left;
+}
+.postMetaGrid .readingTime {
+  /* text-align: right; */
+}
+.postTitleBlock .postTitle {
+  /* float: none; */
+  display: block;
+  
+}
