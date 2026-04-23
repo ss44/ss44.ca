@@ -21,7 +21,7 @@ canonicalUrl: https://shindasingh.com/hp-spectre-tablet-mode-on-cachyos-niri/
 
 {{< img src="hero.png" alt="A sleek 2-in-1 laptop folded into tablet mode, displaying a terminal window alongside an Android interface. Abstract geometric shapes and moody neon blue lighting." resize="800x800>" class="center" >}}
 
-### The Motivation
+## The Motivation
 
 I bought one of those 2-in-1 laptops a few years ago, an HP Spectre specifically. It came with Windows by default, which was fine until I decided I was on a crusade against using Windows on any of my screens in silent protest of it just being bad. 
 
@@ -31,7 +31,7 @@ I played around with virtual keyboards and all,  but it never felt right and Nir
 
 So after some tinkering we came to this solution - launch a touch-native interface like Android via Waydroid whenever the screen is folded back.
 
-### Architecture & Tech Stack
+## Architecture & Tech Stack
 
 To build this bridge between hardware events and the display server, I used the following:
 
@@ -40,11 +40,11 @@ To build this bridge between hardware events and the display server, I used the 
 *   **Waydroid**: A container approach to boot Android on Linux to give me an actual usable tablet interface.
 *   **`libinput` & Bash**: A quick script to listen to the hardware events and launch everything dynamically.
 
-### Development Process & Challenges
+## Development Process & Challenges
 
 I employed the powers of AI, Google, and some good ol' trial and error to piece together this stack. 
 
-#### 1. Hardware Event Detection
+### 1. Hardware Event Detection
 HP Spectres need the `intel_vbtn` driver to recognize the tablet mode switch.
 
 ```fish
@@ -55,7 +55,7 @@ sudo modprobe intel_vbtn
 echo "intel_vbtn" | sudo tee /etc/modules-load.d/intel_vbtn.conf
 ```
 
-#### 2. Sensors & Screen Rotation
+### 2. Sensors & Screen Rotation
 Install the bridge between your accelerometer and the display.
 
 ```fish
@@ -66,7 +66,7 @@ sudo systemctl enable --now iio-sensor-proxy
 paru -S rot8
 ```
 
-#### 3. The Touch Payload (Waydroid)
+### 3. The Touch Payload (Waydroid)
 Since Niri isn't a touch UI, we drop into Android for tablet tasks using Waydroid. 
 
 ```bash
@@ -76,7 +76,7 @@ sudo pacman -S waydroid
 sudo waydroid init -s GAPPS -f
 ```
 
-#### 4. The Automation Script
+### 4. The Automation Script
 This script listens for the specific string reported by the Spectre's sensors and will auto launch Waydroid when in tablet mode.
 
 **File:** `~/bin/tablet-mode.sh`
@@ -94,7 +94,7 @@ libinput debug-events | while read -r line; do
 done
 ```
 
-#### 5. Niri Integration
+### 5. Niri Integration
 Add these to your `~/.config/niri/config.kdl` to automate the whole stack on startup.
 
 ```kdl
@@ -102,6 +102,6 @@ spawn-at-startup "rot8"
 spawn-at-startup "/home/shinda/bin/tablet-mode.sh"
 ```
 
-### What's Next
+## What's Next
 
 The setup works surprisingly well for now. The next iteration will probably involve finding a way to completely suspend Waydroid when I leave tablet mode just to ensure Android background processes don't drain the battery when I am back to using it as a laptop.
