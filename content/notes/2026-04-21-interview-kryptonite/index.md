@@ -6,7 +6,7 @@ categories:
   - Career
 tags:
   - Mindset
-canonicalUrl = "https://www.linkedin.com/feed/update/urn:li:activity:7452223298077151232/"
+canonicalUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7452223298077151232/"
 
 ---
 
