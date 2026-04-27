@@ -68,7 +68,7 @@ skills:
 experience:
   - start: "2022"
     end: "2026"
-    title: "Sr. Developer Analyst"
+    title: "Sr. Full Stack Developer"
     place: "Telus Health (Virtual Care)"
     tech: "Ruby on Rails, Node.js, TypeScript, PostgreSQL, GraphQL, Redis, BullMQ, Solace, Jenkins, Datadog, React"
     details:
