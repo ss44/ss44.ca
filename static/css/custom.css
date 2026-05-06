@@ -102,6 +102,14 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Ensure all images scale proportionally and don't stretch */
+.postWrapper img,
+.content img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 /* --- Typography and Readability Improvements --- */
 
 /* Enhance paragraph readability on single posts and standalone pages */
