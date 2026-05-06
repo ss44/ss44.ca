@@ -7,7 +7,7 @@ categories = ["Career"]
 canonicalUrl = "https://www.linkedin.com/feed/update/urn:li:activity:7448141084268015616/"
 +++
 
-{{< img src="IMG_6395.JPG" alt="A Veteran Systems Develoepr playing golf in the Canadian Rockies" class="center" resize="1920x800" >}}
+{{< img src="IMG_6395.JPG" alt="A Veteran Systems Develoepr playing golf in the Canadian Rockies" class="center" resize="800x450" >}}
 
 With the Masters in full swing, pun kind of intended, I got to thinking about a meme I saw a while ago about why you should never hire a golfer. 
 

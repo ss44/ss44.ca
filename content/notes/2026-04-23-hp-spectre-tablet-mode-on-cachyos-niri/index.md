@@ -19,7 +19,7 @@ canonicalUrl: https://shindasingh.com/hp-spectre-tablet-mode-on-cachyos-niri/
 
 **Automating tablet mode detection to trigger an Android UI on a Linux 2-in-1 device.**
 
-{{< img src="hero.png" alt="A sleek 2-in-1 laptop folded into tablet mode, displaying a terminal window alongside an Android interface. Abstract geometric shapes and moody neon blue lighting." resize="800x800>" class="center" >}}
+{{< img src="hero.png" alt="A sleek 2-in-1 laptop folded into tablet mode, displaying a terminal window alongside an Android interface. Abstract geometric shapes and moody neon blue lighting." resize="800x450" class="center" >}}
 
 ## The Motivation
 

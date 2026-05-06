@@ -10,7 +10,7 @@ canonicalUrl: "https://www.linkedin.com/feed/update/urn:li:activity:745222329807
 
 ---
 
-{{< img src="hero.png" alt="A 2D digital illustration in the style of a modern graphic novel (think The New Yorker cartoon). A panicked candidate is sitting across from a polite but confused HR manager in a generic office. Above the candidate’s head is a classic 'thought bubble' containing a checklist with only one item: 'DON’T SAY KRYPTONITE.' Below that, a glowing green kryptonite rock is falling out of the candidate’s actual mouth while they speak. Bright colors and expressive facial features. (ai prompt)" class="center" resize="1920x800" >}}
+{{< img src="hero.png" alt="A 2D digital illustration in the style of a modern graphic novel (think The New Yorker cartoon). A panicked candidate is sitting across from a polite but confused HR manager in a generic office. Above the candidate’s head is a classic 'thought bubble' containing a checklist with only one item: 'DON’T SAY KRYPTONITE.' Below that, a glowing green kryptonite rock is falling out of the candidate’s actual mouth while they speak. Bright colors and expressive facial features. (ai prompt)" class="center" resize="800x450" >}}
 
 
 *Prepping for an interview...*

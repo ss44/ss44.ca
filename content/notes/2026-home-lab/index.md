@@ -28,7 +28,7 @@ Part wanting to help ya'll out, part wanting a time capsule to look back on, I t
 
 ## Media Server - [Plex](https://www.plex.tv/)
 
-{{< img src="plex.png" alt="Plex" resize="900x900>" class="center" >}}
+{{< img src="plex.png" alt="Plex" resize="800x450" class="center" >}}
 
 This is a bit cliché. I haven't jumped on the jellyfin bandwagon largely because it's just not as accessible across devices. My current Plex server does everything I need and while I can't imagine switching or adding Jellyfin would be a pain, I haven't hit the wall with Plex yet.
 
@@ -38,7 +38,7 @@ I don't think the plex/stack needs to be overly detailed, what works currently h
 
 ## Image Management - [Immich](https://immich.app/)
 
-{{< img src="immich.png" alt="Immich" resize="900x900>" class="center" >}}
+{{< img src="immich.png" alt="Immich" resize="800x450" class="center" >}}
 
 I remember my very first PHP project of any merit over 20 years ago was creating an image management library before changing it up to just using some of the early image libraries whose names have been lost to the obscurity of time.
 
@@ -48,7 +48,7 @@ So in comes the newest addition - _Immich_. I've liked this app enough that I wa
 
 ## Money Management - [Sure](https://github.com/we-promise/sure)
 
-{{< img src="sure.png" alt="Sure" resize="900x900>" class="center" >}}
+{{< img src="sure.png" alt="Sure" resize="800x450" class="center" >}}
 
 I've always sucked at budgeting and while the online tools are nice they're also expensive for something I don't do or use enough. 
 
@@ -60,7 +60,7 @@ I doubt this one shifts too much so long as its core functionality just works.
 
 ## PKM - [Silverbullet](https://silverbullet.md/)
 
-{{< img src="silverbullet.png" alt="Silverbullet" resize="900x900>" class="center" >}}
+{{< img src="silverbullet.png" alt="Silverbullet" resize="800x450" class="center" >}}
 
 This category has always been tricky. We've gone from Notion to Logseq and here we are today at Silverbullet. 
 
@@ -87,7 +87,7 @@ It just works. It's easy. What more do I need?
 
 ## Password Management - [Vaultwarden](https://github.com/dani-garcia/vaultwarden)
 
-{{< img src="vaultwarden.png" alt="VaultWarden" resize="900x900>" class="center" >}}
+{{< img src="vaultwarden.png" alt="VaultWarden" resize="800x450" class="center" >}}
 
 I had to take Lastpass out back last year with the shovel and after having been on it for over 2 decades it was hard to say goodbye.  
 
@@ -97,7 +97,7 @@ But honestly VW which is just a Bitwarden implementation in Rust hasn't made me 
 
 ### Photo Editing- [DXO Labs](https://www.dxo.com/) 
 
-{{< img src="dxophoto.png" alt="DXO" resize="900x900>" class="center" >}}
+{{< img src="dxophoto.png" alt="DXO" resize="800x450" class="center" >}}
 
 This has been collecting dust and it's Windows only which is kind of a bummer. I don't have my drop-in replacement for Linux yet. 
 
@@ -105,7 +105,7 @@ I'll work on that. I also rarely use it currently since I haven't been taking to
 
 ## Video Editing - [Davinci Resolve Studio](https://www.blackmagicdesign.com/products/davinciresolve/)
 
-{{< img src="davinci.png" alt="Davinci Resolve" resize="900x900>" class="center" >}}
+{{< img src="davinci.png" alt="Davinci Resolve" resize="800x450" class="center" >}}
 
 I probably won't be replacing this with any OSS tool yet. I know how to use this. It works on Linux. Yes it's hella annoying on Linux, but it works. 
 
@@ -113,7 +113,7 @@ I'm just too comfortable with it and owning the studio license makes it easy for
 
 ## VPN - [Tailscale](https://tailscale.com/)
 
-{{< img src="tailscale.png" alt="Tailscale" resize="900x900>" class="center" >}}
+{{< img src="tailscale.png" alt="Tailscale" resize="800x450" class="center" >}}
 
 I'm still flabbergasted by whatever witches and wizards put this thing together. It's just beautiful. There are very few cases of tech that bring a tear to my eye or that I would just say are so elegantly awesome. Tailscale is that unicorn right now.
 

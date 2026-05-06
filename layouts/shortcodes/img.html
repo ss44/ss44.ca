@@ -3,12 +3,28 @@
 {{ $class := .Get "class" | default "" }}
 {{ $resize := .Get "resize" }}
 {{ $img := .Page.Resources.GetMatch $src }}
-{{ if and $img $resize }}
+
+{{ if $img }}
+  {{/* If no resize is provided, default to a max-width of 1200px to prevent massive unoptimized images */}}
+  {{ if not $resize }}
+    {{ if gt $img.Width 1200 }}
+      {{ $resize = "1200x" }}
+    {{ else }}
+      {{ $resize = printf "%dx" $img.Width }}
+    {{ end }}
+  {{ end }}
+
   {{/* Strip any trailing > from ImageMagick */}}
   {{ $cleanResize := replace $resize ">" "" }}
+  
+  {{/* Always add webp optimization by default if no format is explicitly specified */}}
+  {{ if not (in $cleanResize " ") }}
+    {{ $cleanResize = printf "%s webp" $cleanResize }}
+  {{ end }}
+
   {{/* If both width and height are provided, use Fit to resize proportionally within those bounds */}}
-  {{ if in $cleanResize "x" }}
-    {{ $parts := split $cleanResize "x" }}
+  {{ if in (index (split $cleanResize " ") 0) "x" }}
+    {{ $parts := split (index (split $cleanResize " ") 0) "x" }}
     {{ if and (ne (index $parts 0) "") (ne (index $parts 1) "") }}
       {{ $img = $img.Fit $cleanResize }}
     {{ else }}
@@ -21,7 +37,7 @@
 
 <figure class="{{ $class }}">
   {{ if $img }}
-    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" loading="lazy" />
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}" />
   {{ else }}
     <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" />
   {{ end }}

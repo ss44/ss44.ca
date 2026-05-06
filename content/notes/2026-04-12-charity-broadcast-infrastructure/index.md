@@ -8,7 +8,7 @@ tags = ["Automation", "System Design", "Livestreaming", "Streamer.bot", "A/V Rou
 
 **[Charity Broadcasts](#) — A technical breakdown of the dual-PC broadcasting pipeline and custom automation built to host community gaming tournaments.**
 
-{{< img src="placeholder.png" alt="A screenshot or photo of the streaming setup or tournament graphic" resize="800x800>" class="center" >}}
+{{< img src="placeholder.png" alt="A screenshot or photo of the streaming setup or tournament graphic" resize="800x450" class="center" >}}
 *(Note: Please drop a relevant image into this note's folder, name it placeholder.png, or update the filename above)*
 
 ### The Motivation

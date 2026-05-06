@@ -8,7 +8,7 @@ categories = ["Portfolio", "Engineering"]
 
 **[ss44.ca](https://github.com/ss44/ss44.ca)** is my professional landing page and digital garden. It's a place to host my resume, document my homelab, and highlight some technical projects to advertise my skills.
 
-{{< img src="screenshot.png" alt="ss44.ca home page in 2026" class="center" >}}
+{{< img src="screenshot.png" alt="ss44.ca home page in 2026" resize="800x450" class="center" >}}
 
 ## The Motivation
 I don't even know if professional personal websites are still a primary requirement, or if they are a relic of a bygone era. However, I vividly remember career counselors emphasizing: _"at least be able to prove you can do some of what you say you can, by having a domain with some of what you say you do on it."_ 
