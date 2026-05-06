@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding a Political Campaign: Mandeep For Ward 5"
 date: 2026-05-06
-draft: false
+draft: true
 tags: ["AI", "Web Development", "Hugo", "CI/CD", "Automation"]
 categories: ["Portfolio", "Engineering", "Architecture"]
 ---
