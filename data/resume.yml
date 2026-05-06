@@ -69,7 +69,7 @@ experience:
   - start: "2022"
     end: "2026"
     title: "Sr. Full Stack Developer"
-    place: "Telus Health (Virtual Care)"
+    place: "Telus Health - Virtual Care (Remote)"
     tech: "Ruby on Rails, Node.js, TypeScript, PostgreSQL, GraphQL, Redis, BullMQ, Solace, Jenkins, Datadog, React"
     details:
       - "Architected and implemented highly scalable product modules within a Ruby/Postgres backend monolith."
@@ -86,7 +86,7 @@ experience:
   - start: "2015"
     end: "2022"
     title: "Sr. Web & Mobile Developer & Architect"
-    place: "Mobile Fringe / Mall Maverick"
+    place: "Mobile Fringe / Mall Maverick (Hybrid)"
     tech: "Ruby on Rails, Vue.js, Electron, C#, Kubernetes, AWS (EC2, S3, RDS), Java, Objective-C"
     details:
       - "Led migration of a legacy proprietary CMS from Rails 3 to a Rails 5 API backend, implementing a secure REST API and a modern VueJS/HTML5 front end."
