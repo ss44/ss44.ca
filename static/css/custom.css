@@ -22,25 +22,38 @@
     text-decoration: none;
 }
 
-.postListLink:hover .customPostTitle {
+.postListLink:hover .postTitle {
     text-decoration: underline;
 }
 
-.postTitleBlock {
-    margin-bottom: 8px;
-    display: block;
+/* Fix title wrapping and date floating issues */
+.postHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible !important; /* Override theme's overflow hidden */
+    margin-bottom: 4px;
+    gap: 6px;
 }
 
-.customPostTitle {
+.postTitle {
+    float: none !important; /* Stop theme from floating left */
     display: block;
     font-size: 1.4em;
     font-weight: 600;
     line-height: 1.3;
     text-align: left;
     margin: 0;
-    color: #f8f8ff; /* Assuming this is your v.$white or similar */
-    font-family: inherit;
-    text-transform: capitalize;
+    color: #f8f8ff;
+}
+
+.postDate {
+    float: none !important; /* Stop theme from floating right */
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+    color: #a9a9b3 !important;
+    margin: 0;
 }
 
 .postMetaFlex {
@@ -48,26 +61,26 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px; /* Small natural space between date and time */
+    gap: 8px; /* Space around the separator */
     margin-bottom: 16px;
     font-size: 0.9em;
-    color: #a9a9b3; /* Muted text color */
+    color: #a9a9b3;
 }
 
-.postDate,
-.postMetaFlex .readingTime {
-    display: flex;
-    align-items: center;
-    gap: 4px; /* Tight space between emoji and text */
-    text-align: left;
-    color: inherit;
-    margin: 0;
-    float: none !important; /* Stop base theme from floating */
+.metaSeparator {
+    color: #a9a9b3;
+    opacity: 0.6;
+}
+
+.readingTime {
+    font-size: 0.9em;
+    color: #a9a9b3 !important;
+    margin: 0; /* Clear margins since flex handles layout */
 }
 
 /* Rest of excerpt */
 .postExcerpt {
-    margin-top: 16px;
+    margin-top: 12px;
     line-height: 1.5;
     color: #e0e0e0;
     display: block;
@@ -89,4 +102,39 @@
     border-radius: 4px;
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Typography and Readability Improvements --- */
+
+/* Enhance paragraph readability on single posts and standalone pages */
+.postWrapper p,
+.postWrapper li {
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+    font-size: 1.05rem;
+    color: #e2e2e8; /* Slightly softer white to reduce eye strain */
+}
+
+/* Give lists proper breathing room */
+.postWrapper ul,
+.postWrapper ol {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+.postWrapper li {
+    margin-bottom: 0.5em; /* Space between list items */
+}
+
+/* Ensure headings have proper spacing to break up text walls */
+.postWrapper h2 {
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+    line-height: 1.3;
+}
+
+.postWrapper h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.75em;
+    line-height: 1.3;
 }
