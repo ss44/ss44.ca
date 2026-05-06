@@ -23,8 +23,6 @@ skills:
       - "JavaScript"
       - "TypeScript"
       - "PHP"
-      - "Python"
-      - "Java"
       
   - category: "Databases"
     items:
