@@ -205,11 +205,20 @@
 
     // Add or remove #experience(...) blocks as needed.
     #for exp in resume-data.experience {
+      let date-str = ""
+      if "start" in exp and exp.start != "" and "end" in exp and exp.end != "" {
+        date-str = exp.start + " – " + exp.end
+      } else if "start" in exp and exp.start != "" {
+        date-str = exp.start
+      } else if "end" in exp and exp.end != "" {
+        date-str = exp.end
+      }
+
       experience(
         exp.place,
         exp.title,
         "",
-        exp.start + " – " + exp.end,
+        date-str,
         exp.details,
         tech: exp.at("tech", default: none),
       )
