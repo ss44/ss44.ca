@@ -18,7 +18,7 @@
   {{ $pages := .RegularPages }}
   {{ $paginator := .Paginate $pages }}
 
-  <div role="list">
+  <div class="postsList" role="list">
     {{ range $paginator.Pages }}
       <div class="postListItem" role="listitem">
         <a class="postListLink" href="{{ .Permalink }}">
