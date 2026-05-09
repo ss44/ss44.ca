@@ -1,8 +1,8 @@
 # Hi, I'm {{ .Site.Data.resume.personal.name }} 👋
 
-**{{ .Site.Data.resume.personal.subtitle }}**
+I'm a Senior Full Stack Web Developer with 20+ years of experience turning complex problems into scalable, secure web applications.
 
-{{ .Site.Data.resume.summary }}
+My core expertise lies in **Ruby**, **JavaScript** (*TypeScript, React, VueJS*), **PHP**, and SQL (**PostgreSQL, MySQL**). Ultimately, my real passion is building resilient systems that users love and developers enjoy maintaining.
 
 ## 🛠️ Skills & Technologies
 
