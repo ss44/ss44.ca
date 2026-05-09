@@ -14,7 +14,7 @@ personal:
       text: "linkedin.com/in/ss44"
 
 
-summary: "Senior Systems Architect and Full Stack Developer with 20+ years of experience specializing in architecting and scaling high-volume, security and privacy focused web applications."
+summary: "Senior Systems Architect and Full Stack Developer with 20+ years of experience specializing in designing and scaling high-volume, security, and privacy-focused web applications."
 
 skills:
   - category: "Languages"
@@ -73,14 +73,14 @@ experience:
       - "Architected and implemented core products and services module controlling user access, sustaining thousands of requests per minute within a Ruby monolith with negligible latency and memory load. (Ruby, Postgres)."
       - "Migrated REST API to GraphQL for the support administration portal, eliminating REST over-fetching and decreasing load latency by 70% (from 2s to 600ms)."
       - "Optimized low-performing search queries (Postgres, Redis, Opensearch, Sequel ORM), slashing execution time from up to 8 seconds down to 500ms."
-      - "Scaled back-end operations to handle direct, high-volume data integration with partner vendors handling thosands of users. (Ruby, Sidekiq, Redis)."
-      - "Worked within a team to upgrade our eligibility handling microservices, scaling from handling 5,000 transactions in minutes to a concurrent batch processing system capable of handling 1M+. (NodeJS, TypeScript, Redis, BullMQ)."
+      - "Scaled back-end operations for high-volume vendor data integrations supporting thousands of users (Ruby, Sidekiq, Redis)."
+      - "Upgraded eligibility microservices, scaling concurrent batch processing from 5K to 1M+ transactions (NodeJS, TypeScript, Redis, BullMQ)."
       - "Architected a high-volume Event-Driven data synchronization pipeline using Solace and Ruby, enabling real-time authentication consistency across systems."
       - "Worked with support to migrate legacy clients to new optimized flows, writing utility scripts and triaging issues in production. (Ruby, Jenkins, Datadog)."
-      - "Implemented backend authentication logic for vendor side integration to internal systems with Canada's top insurance and benefit providers (JWT, Ruby)."
+      - "Implemented JWT vendor authentication for integrations with Canada's top insurance and benefit providers (Ruby)."
       - "Integrated AI tools and agent scripts into the development pipeline to assist with routine tasks and improve workflow efficiency."
       - "Ensured systems architecture and data integration pipelines maintained strict compliance with Canadian PIPEDA/PHIPA privacy regulations."
-      - "Mentored junior developers via pair programming and enforced strict code quality standards through PR reviews within a core team of 5 and cross-functional across 4 engeineering teams (Ruby, React, TypeScript, Postgres)."
+      - "Mentored junior developers via pair programming and enforced code quality through PR reviews within a core team of 6 and across 4 engineering teams (Ruby, React, TypeScript, Postgres)."
   - start: "2015"
     end: "2022"
     title: "Sr. Web & Mobile Developer & Architect"
