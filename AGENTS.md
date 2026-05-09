@@ -20,6 +20,10 @@ This site is a professional landing page that hosts a dynamically generated resu
 
 ### "Resume as Code"
 A core architectural feature of this site is that the resume is treated as code. Both the HTML resume view and the downloadable PDF are generated from the exact same underlying YAML file using a CI/CD pipeline. 
+The source of truth for all resume data is `data/resume.yml`.
+
+### Resume Rules & Guidelines
+Any modifications, evaluations, or improvements to the resume should strictly follow the rules outlined in `.ai/rules.md`. When interacting with the resume, always measure and update `data/resume.yml` against these guidelines.
 
 ---
 
