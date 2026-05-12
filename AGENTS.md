@@ -86,3 +86,8 @@ To maintain consistency, try to use the following standard categories and tags w
 *   Do not edit the core theme files in `themes/hugo-theme-nightfall/` unless absolutely necessary.
 *   All custom style overrides should be placed in `static/css/custom.css`. 
 *   Menu layouts and icons are managed in `hugo.toml`. (Note: The site uses FontAwesome 6.5 loaded via CDN in `layouts/_partials/custom-head.html`).
+
+---
+
+## 5. Idea Backlog & Tasks
+Future ideas, feature requests, and design tweaks (such as adding a 5-point TL;DR strictly to the HTML resume view) are stored in `ideas.md` at the project root. Always check or append to this file when brainstorming future iterations.
