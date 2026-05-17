@@ -1,5 +1,5 @@
 +++
-title = "Hockey, Momentum, and Adjustments (LinkedIn Post)"
+title = "Hockey, Momentum, and Adjustments"
 date = 2026-05-17T11:24:00-04:00
 draft = false
 tags = ["Mindset", "LinkedIn", "Hockey"]
