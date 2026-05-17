@@ -56,13 +56,20 @@ Hugo is configured to use **Page Bundles**.
 *   Place all images and assets for that post directly alongside the `index.md` in that specific folder.
 
 ### Archetype Format
-All new notes should follow the established archetype format (`archetypes/notes.md`):
+All new project or technical notes should follow the established archetype format (`archetypes/notes.md`):
 1.  **The Hook:** A bolded link to the project and a 1-sentence summary of what it does.
 2.  **Screenshot:** Use the custom image shortcode.
 3.  **The Motivation:** The backstory, the missing gap, or the problem being solved.
 4.  **Architecture & Tech Stack:** The bulleted list of technologies and *why* they were used.
 5.  **Development Process & Challenges:** The hard engineering parts, how AI was leveraged, or clever workarounds.
 6.  **What's Next:** Future plans.
+
+### Cross-Posting & Social Media Content
+When creating notes from social media posts (e.g., LinkedIn):
+*   Add `canonicalUrl: "URL_HERE"` to the frontmatter to avoid SEO penalties.
+*   You do not need to strictly follow the technical archetype sections (Motivation, Architecture, etc.). A natural narrative format is fine.
+*   Always include a standard footer linking back to the original post: `*This article was originally published on [Platform](URL). Join the conversation there!*`
+*   Ensure the custom image shortcode is still used and appropriately resized.
 
 ### Image Handling
 Do **not** use standard Markdown image tags like `![alt](url)`. 
