@@ -4,7 +4,7 @@ date = 2026-05-17T11:24:00-04:00
 draft = false
 tags = ["Mindset", "LinkedIn", "Hockey"]
 categories = ["Opinion", "Career"]
-canonicalUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7461770303040454656/"
+canonicalUrl = "https://www.linkedin.com/feed/update/urn:li:activity:7461770303040454656/"
 
 +++
 
