@@ -167,6 +167,9 @@
 
 // ─── Body ─────────────────────────────────────────────────────────────────────
 
+// Helper to replace markdown bold
+#show regex("\*\*(.*?)\*\*"): it => strong(it.text.slice(2, -2))
+
 #grid(
   columns: col-ratio,
   rows: auto,
@@ -175,6 +178,16 @@
   column-gutter: 0.5cm,
   [
     // ── Sidebar ──────────────────────────────────────────────────────────────
+
+    = #upper("Skills")
+
+    // Add or remove #skill-category(...) blocks as needed.
+    // Each block takes a category name and an array of items.
+    #for skill in resume-data.skills {
+      skill-category(skill.category, skill.items)
+    }
+
+    #line(stroke: (dash: "dashed", paint: accent), length: 90%)
 
     = #upper("Education")
 
@@ -185,16 +198,6 @@
         "",
         edu.start + " – " + edu.end,
         (edu.title,)      )
-    }
-
-    #line(stroke: (dash: "dashed", paint: accent), length: 90%)
-
-    = #upper("Skills")
-
-    // Add or remove #skill-category(...) blocks as needed.
-    // Each block takes a category name and an array of items.
-    #for skill in resume-data.skills {
-      skill-category(skill.category, skill.items)
     }
 
   ],

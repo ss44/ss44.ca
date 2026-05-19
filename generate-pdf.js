@@ -3,7 +3,9 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const pdfPath = path.join(__dirname, 'public', 'resume.pdf');
+const atsPdfPath = path.join(__dirname, 'public', 'resume-ats.pdf');
 const typstPath = path.join(__dirname, 'cobalt-cv', 'main.typ');
+const atsTypstPath = path.join(__dirname, 'cobalt-cv', 'ats.typ');
 const yamlPath = path.join(__dirname, 'data', 'resume.yml');
 const fontsDir = path.join(__dirname, 'fonts');
 
@@ -16,7 +18,9 @@ function getMTime(filePath) {
 }
 
 const pdfMTime = getMTime(pdfPath);
+const atsPdfMTime = getMTime(atsPdfPath);
 const typstMTime = getMTime(typstPath);
+const atsTypstMTime = getMTime(atsTypstPath);
 const yamlMTime = getMTime(yamlPath);
 
 // Define fonts to download
@@ -33,7 +37,7 @@ const fonts = [
   { file: 'fa-brands-400.ttf', url: 'https://github.com/FortAwesome/Font-Awesome/raw/6.5.2/webfonts/fa-brands-400.ttf' }
 ];
 
-if (pdfMTime < typstMTime || pdfMTime < yamlMTime) {
+if (pdfMTime < typstMTime || pdfMTime < yamlMTime || atsPdfMTime < atsTypstMTime || atsPdfMTime < yamlMTime) {
   console.log('Changes detected. Setting up fonts and compiling PDF...');
   
   if (!fs.existsSync(fontsDir)) {
@@ -88,6 +92,9 @@ if (pdfMTime < typstMTime || pdfMTime < yamlMTime) {
     // Compile using the appropriate command
     execSync(`${typstCmd} compile --root . --font-path fonts ${inputArgs} "${typstPath}" "${pdfPath}"`, { stdio: 'inherit' });
     console.log('PDF generated at public/resume.pdf');
+    
+    execSync(`${typstCmd} compile --root . --font-path fonts ${inputArgs} "${atsTypstPath}" "${atsPdfPath}"`, { stdio: 'inherit' });
+    console.log('ATS PDF generated at public/resume-ats.pdf');
   } catch (error) {
     console.error('Error generating PDF with Typst:', error.message);
     process.exitCode = 1;

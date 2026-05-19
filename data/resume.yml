@@ -14,9 +14,15 @@ personal:
       text: "linkedin.com/in/ss44"
 
 
-summary: "Senior Systems Architect and Full Stack Developer with 20+ years of experience specializing in designing and scaling high-volume, security, and privacy-focused web applications."
+summary: "Senior Systems Architect and Full Stack Developer with 20+ years of experience in architecting and scaling - high-volume, security and privacy-focused web applications. AI-ready and deeply experienced in leveraging AI tools to improve development speed, code quality, and system automation."
 
 skills:
+  - category: "AI & Tooling"
+    items:
+      - "LLM API Integration (OpenAI, Anthropic, Gemini)"
+      - "AI-Assisted Development (Cursor, Kilo)"
+      - "Custom Agent Scripting"
+
   - category: "Languages"
     items:
       - "Ruby"
@@ -56,12 +62,6 @@ skills:
       - "CI/CD Scripting (Bash, Fish, Jenkins)"
       - "AWS, Google Cloud, Digital Ocean"
       - "Datadog"
-
-  - category: "AI & Tooling"
-    items:
-      - "LLM API Integration (OpenAI, Anthropic, Gemini)"
-      - "AI-Assisted Development (Cursor, Kilo)"
-      - "Custom Agent Scripting"
 
 experience:
   - start: "2022"
