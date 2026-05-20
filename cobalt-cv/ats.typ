@@ -11,7 +11,24 @@
 #show heading.where(level: 2): set text(size: 12pt, weight: "bold")
 
 #set page(
-  margin: (top: 0.5in, bottom: 0.5in, left: 0.5in, right: 0.5in)
+  margin: (top: 0.5in, bottom: 0.5in, left: 0.5in, right: 0.5in),
+  footer: context {
+    set text(size: 8.5pt, style: "italic")
+    let total = counter(page).final().first()
+    if total > 1 {
+      let current = counter(page).get().first()
+      if current > 1 {
+        grid(
+          columns: (1fr, 1fr),
+          align: (left, right),
+          [#name],
+          [Page #current of #total]
+        )
+      } else {
+        align(right)[Page #current of #total]
+      }
+    }
+  }
 )
 
 // Helper to replace markdown bold
@@ -21,7 +38,7 @@
 #align(center)[
   #text(size: 20pt, weight: "bold")[#name]
   
-  #v(0.1em)
+  #v(-0.8em) // Negative vertical space to bring contacts closer without affecting the rest of the layout
   
   #let ats-contacts = ()
   #let phone-input = sys.inputs.at("phone", default: none)
