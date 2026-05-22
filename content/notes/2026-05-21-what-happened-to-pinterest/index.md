@@ -1,7 +1,7 @@
 ---
 title: "What Happened To Pinterest?!"
 date: 2026-05-21T21:18:00-04:00
-draft: true
+draft: false
 categories:
   - Opinion
   - Engineering
@@ -37,3 +37,4 @@ So who does this Frankenstein future actually serve?
 The old Silicon Valley adage goes, *"If the service is free, you're the product."* But when the people using the service are slowly pushed away by an avalanche of synthetic garbage, what exactly remains to be monetized? You end up with a closed loop of bots serving ads to other bots.
 
 Pinterest isn't a casualty of AI. It’s a casualty of forgetting its core utility and failing to put its users first.
+
