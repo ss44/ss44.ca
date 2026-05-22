@@ -26,6 +26,3 @@ They constantly need to be reminded every so often about the task I'm trying to 
 Not to mention they cost me a fortune and ...
 
 < interviewer : 😫 >
-
----
-*This article was originally published on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7458506945910607872/). Join the conversation there!*

@@ -21,6 +21,3 @@ Lastly, a loss is only a loss if you don't learn from it. You don't always get a
 Game 7 is shaping up to be a wild one, and this series is delivering everything I expected.
 
 Anyways, I'm not sure if I'm doing this LinkedIn thing right, but for more cliché sports analogies tied to business, hit that follow button. 😅
-
----
-*This article was originally published on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7461770303040454656/). Join the conversation there!*

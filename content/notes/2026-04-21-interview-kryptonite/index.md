@@ -30,7 +30,3 @@ damn it 🫠☠️
 ------
 
 Has anyone else ever had their brain betray them in an interview, or am I the only one with old Seinfeld jokes still echoing in their brain? 😭
-
----
-*This article was originally published on [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7452223298077151232/). Join the conversation there!*
-
