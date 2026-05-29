@@ -23,6 +23,13 @@ ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
     url = "resume"
     pre = "fa-solid fa-file-code"
 
+  [[menu.header]]
+    name = ".now"
+    weight = 2
+    url = "now"
+    pre = "fa-solid fa-file-code"
+
+
 [params]
 description = "Senior Systems Architect and Full Stack Developer with 20+ years of experience."
 images = ["/meta-preview.png"]
