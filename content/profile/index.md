@@ -1,6 +1,6 @@
 ---
 title: ".profile"
-date: 2026-04-18T14:13:48-04:00
+date: 2026-05-30T9:56:25-04:00
 draft: false
 ---
 
@@ -39,3 +39,21 @@ A collection of completely unsolicited opinions to help you figure out who you'r
 
 ### Why do developers love dark mode so much?
 > Dark mode doesn't actually make you a 10x developer, it just helps hide the bags under your eyes during morning meetings.
+
+### What is your take on Agile?
+> Nothing makes develoeprs work better and faster than making 'em stand up through meetings. Agile was just a way to make developers interact with product and not retreat behind their dark terminals under their desk.
+
+### What's your opinion on Technical Debt?
+> Tech debt is just code that needed to be shipped yesterday, that got shipped today and we promised to fix tomorrow. (Tomorrow never comes)
+
+### How do you feel about Legacy Code?
+> Legacy code is just another way of saying that its code that works in a language that new developers don't understand, so they push for upgrades that no one needs. Basically anything coded without a prompt is now legacy code. 
+
+### Cloud Native or On-Prem?
+> Cloud native is just clever way to pay Bezos for more compute power for shipping diapers.
+
+### What's your stance on Work-Life Balance?
+> A myth created by corporations to steal engineers from startups, in leu of seasonal layoffs.
+
+### How do you handle conflict with your team?
+> I remind them that I'm smarter than they are and to just trust me bro. Then blame AI if it doesn't work out.
