@@ -7,27 +7,27 @@ ignoreFiles = ["cobalt-cv", "cobalt\\.cv"]
 [menu]
   [[menu.header]]
     name = "notes"
-    weight = 0
+    weight = 20
     url = "notes"
     pre = "fa-solid fa-note-sticky"
 
   [[menu.header]]
     name = ".profile"
-    weight = 1
+    weight = 30
     url = "profile"
     pre = "fa-solid fa-user"
 
   [[menu.header]]
     name = "resume"
-    weight = 2
+    weight = 10
     url = "resume"
     pre = "fa-solid fa-file-code"
 
   [[menu.header]]
-    name = ".now"
-    weight = 2
+    name = "now"
+    weight = 40
     url = "now"
-    pre = "fa-solid fa-file-code"
+    pre = "fa-solid fa-clock"
 
 
 [params]
