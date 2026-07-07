@@ -3,13 +3,13 @@ personal:
   subtitle: "Senior Systems Architect and Full Stack Developer"
   contact:
     - icon: "fa-map-marker-alt"
-      text: "British Columbia, Canada"
+      text: "Victoria, B.C, Canada"
     - icon: "fa-envelope"
       text: "ss@ss44.ca"
     - icon: "fa-globe"
       text: "ss44.ca"
-    - icon: "fa-github"
-      text: "github.com/ss44"
+    # - icon: "fa-github"
+    #   text: "github.com/ss44"
     - icon: "fa-linkedin"
       text: "linkedin.com/in/ss44"
 
