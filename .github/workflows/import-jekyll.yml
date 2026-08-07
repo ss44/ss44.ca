@@ -1,0 +1,40 @@
+name: Import Jekyll Posts
+
+on:
+  schedule:
+    # Run daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allow running manually from the GitHub UI
+
+jobs:
+  import-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Hugo Repo
+        uses: actions/checkout@v4
+
+      - name: Checkout Jekyll Repo
+        uses: actions/checkout@v4
+        with:
+          repository: 'YOUR_GITHUB_USERNAME/YOUR_JEKYLL_REPO_NAME' # 👈 Replace with the actual Jekyll repo
+          path: 'jekyll-source'
+          # token: ${{ secrets.PAT }} # Un-comment and add Personal Access Token if the Jekyll repo is private
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.1x'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run Import Script
+        run: python scripts/import_jekyll.py jekyll-source --hugo-dir .
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated import of new Jekyll posts"
+          branch: main
+          file_pattern: 'content/posts/**'

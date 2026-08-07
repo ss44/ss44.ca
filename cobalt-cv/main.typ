@@ -200,6 +200,31 @@
         (edu.title,)      )
     }
 
+    #align(bottom)[
+      #context {
+        if counter(page).get().first() > 1 {
+          let phone-input = sys.inputs.at("phone", default: none)
+          let contacts = resume-data.personal.contact
+          
+          let footer-items = ()
+          if phone-input != none {
+            footer-items.push(phone-input)
+          }
+          for c in contacts {
+            if c.icon == "fa-envelope" {
+              footer-items.push(c.text)
+            } else if c.icon == "fa-globe" {
+              footer-items.push(c.text)
+            }
+          }
+          
+          [
+            #text(fill: accent, size: 8.5pt, weight: "bold")[#name] \
+            #text(size: 7.5pt)[#footer-items.join(" | ")]
+          ]
+        }
+      }
+    ]
   ],
   [
     // ── Main content ─────────────────────────────────────────────────────────
